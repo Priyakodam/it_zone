@@ -1,0 +1,36 @@
+.navbar {
+
+  /* color: white; */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-right: 300px;
+  margin-left: auto;
+  font-size: 20px;
+}
+
+.nav-links li {
+  padding: 10px;
+  margin-right: 35px;
+}
+
+.nav-link, .nav-links a {
+  color: blue;  
+  text-decoration: none;
+  display: block;
+}
+
+.active {
+  /* background-color: #34B6DE;  */
+  color: white; /* Consistent text color for active state */
+}
