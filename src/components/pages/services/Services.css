@@ -1,0 +1,70 @@
+.simplify-service {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #f9f9f9; 
+    
+  }
+  
+  .text-section {
+    max-width: 50%;
+  }
+  
+  .text-section h2 {
+    margin-bottom: 10px;
+    font-size: 2rem; /* Example font size */
+  }
+  
+  .text-section p {
+    margin-bottom: 10px;
+    line-height: 1.6; /* Example line height */
+  }
+  
+  .download-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #000; /* Example button color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .image-section {
+    cursor: pointer;
+    max-width: 45%;
+  }
+  
+  @keyframes slideFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-from-left {
+    animation: slideFromLeft 1s ease forwards;
+  }
+  
+  .animate-from-right {
+    animation: slideFromRight 1s ease forwards;
+  }
+  
+  
+
+  

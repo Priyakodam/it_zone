@@ -6,7 +6,7 @@ import logo from '../img/ITZone-logo.png';
 const Navbar = () => {
     const [active, setActive] = useState("");
 
-    // Function to handle link activation
+   
     const handleSetActive = (link) => {
         setActive(active !== link ? link : "");
     };
@@ -24,22 +24,27 @@ const Navbar = () => {
                 <li>
                     <NavLink to="/services" activeClassName="active" onClick={() => handleSetActive("services")}>Services</NavLink>
                 </li>
-                <li className="dropdown-container">
+                <li className="dropdown-container" >
                     <NavLink to="/products" 
                              className={`nav-link dropdown-toggle ${active === "products" ? "active" : ""}`}
                              onClick={() => handleSetActive("products")}>
                         Products
                     </NavLink>
-                    
-                        <div className='col-md-4'>
                     <div className={`dropdown-menu ${active === "products" ? "show" : ""}`}>
-                        <NavLink to="/laptop" className="dropdown-item">Laptop</NavLink>
-                        <NavLink to="/mobile" className="dropdown-item">Mobile</NavLink>
-                        <NavLink to="/phone" className="dropdown-item">Phone</NavLink>
+                        <div className="row">
+                            <div className="col">
+                            <NavLink to="/software" className="dropdown-item">Laptop&Computer Brand</NavLink>
+                                <NavLink to="/software" className="dropdown-item">Software Installation Support</NavLink>
+                                <NavLink to="/enterprise" className="dropdown-item">Enterprise Solutions</NavLink>
+                                <NavLink to="/management" className="dropdown-item">Server Rack and Cable Management</NavLink>
+                            </div>
+                            <div className="col">
+                                <NavLink to="/software2" className="dropdown-item">Additional Software</NavLink>
+                                <NavLink to="/enterprise2" className="dropdown-item">More Solutions</NavLink>
+                                <NavLink to="/management2" className="dropdown-item">Other Management Services</NavLink>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                    
-                    
                 </li>
                 <li>
                     <NavLink to="/contact" activeClassName="active" onClick={() => handleSetActive("contact")}>Contact</NavLink>
