@@ -3,6 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative; /* Ensures navbar is positioned relatively within its container */
+  width: 100%; /* Ensures navbar spans the full width */
+  z-index: 1000; /* High z-index to ensure navbar is above other content */
 }
 
 .logo {
@@ -36,22 +39,6 @@
   color: #e61520; /* Active color: Red */
 }
 
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: white;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  width: auto;
-  max-width: 90vw;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.show {
-  display: block;
-}
-
 .menu-toggle {
   display: none;
   cursor: pointer;
@@ -75,10 +62,12 @@
       display: none;
       flex-direction: column;
       width: 100%;
-      position: absolute;
-      top: 70px;
+      position: fixed; /* Changed from absolute to fixed */
+      top: 70px; /* Adjust top as needed */
       left: 0;
       background-color: #fff;
+      z-index: 999; /* Ensure the nav-links overlay other content */
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Optional: adds shadow for better visibility */
   }
 
   .nav-links.open {
@@ -87,18 +76,5 @@
 
   .nav-links a:hover, .nav-links a:active, .active {
       color: #e61520; /* Active and hover colors are red on mobile */
-  }
-
-  .dropdown-menu {
-      position: static;
-      width: 100%;
-      max-width: 100%;
-      transform: none;
-      left: 0;
-      padding-left: 10px;
-  }
-
-  .dropdown-container .row .col {
-      width: 100%;
   }
 }
