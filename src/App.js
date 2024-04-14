@@ -7,11 +7,6 @@ import Products from './components/pages/products/Products';
 import Home from './components/pages/home/Home';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
-// const Home = () => <h1>Home Page</h1>;
-// const About = () => <h1>About Page</h1>;
-// const Services = () => <h1>Services Page</h1>;
-// const Products = () => <h1>Products Page</h1>;
-// const Contact = () => <h1>Contact Page</h1>;
 
 function App() {
     return (
@@ -24,6 +19,7 @@ function App() {
                     <Route path="/services" element={<Services/>}/> 
                     <Route path="/products" element={<Products/>} />
                     <Route path="/contact" element={<Contact/>} />
+                    
                 </Routes>
             </div>
         </Router>

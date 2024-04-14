@@ -6,8 +6,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import lap from '../../img/lap.jpg';
 import cc2 from '../../img/cc2.jpg'; 
 import computer3 from '../../img/computer3.jpg'; 
-import computerr2 from '../../img/computerr2.webp'; 
+import computer123 from '../../img/computer123.png';
 import Hardware from '../../img/HARDWARE-NETWORKING.webp'; 
+import hardware from '../../img/hardware.jpeg'; 
 import apple from '../../img/applelaptop.jpg'; // Replace with actual path to image
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -80,6 +81,7 @@ const Products = () => {
           </div>
           <div className="col-md-6 " >
           <img src={cc2} alt="Laptop" className="image" />
+          <img src={cc2} alt="Laptop" className="image ipad-class mt-3" />
           </div>
          </div>
         
@@ -89,19 +91,31 @@ const Products = () => {
 
 
       <div className="container mt-5">
-      <div className="card">
-          <div className="card-body">
-        <div className="row">
-          <div className="col-md-12 text-center">
-         
-            <h3>Hardware & Networking Solutions</h3>
+        <div className="background-container">
+     
+          <img src={hardware} alt="Laptop" className="product-image" />
+          <div className="text-content text-image bg-white p-5">
+            <div className="red-dash"></div>
+            <h3 className="text-center">Hardware & Networking Solutions</h3>
+              <p>iTZ-ONE is one of the leading companies in Computer Sales and Services that is gaining momentum each day. Backed by a strong team of highly-skilled professionals, we provide world-class services. We sell to our customers the latest and most reliable computers, which meet industry standards and come with the finest features and functions. Moreover, we have our own service center to bring out more technical solutions for you.</p>
+            <Button onClick={handleShow} className="discover-more-btn">view more</Button>
           </div>
-          <div className="col-md-12 ">
-        <p>iTZ-ONE is one of the leading companies in Computer Sales and Services that is gaining momentum each day. Backed by a strong team of highly-skilled professionals, we provide world-class services. We sell to our customers the latest and most reliable computers, which meet industry standards and come with the finest features and functions. Moreover, we have our own service center to bring out more technical solutions for you.</p></div>
+        </div>
       </div>
+
+      {/* <div className="container mt-5">
+      <div className="card">
+        <div className="card-body sample">
+          <div className="content-overlay">
+            <img src={cc2} alt="Laptop" className="image-overlay" />
+            <div className="text-content bag bg-white">
+              <h3 className="text-center">Hardware & Networking Solutions</h3>
+              <p>iTZ-ONE is one of the leading companies in Computer Sales and Services that is gaining momentum each day. Backed by a strong team of highly-skilled professionals, we provide world-class services. We sell to our customers the latest and most reliable computers, which meet industry standards and come with the finest features and functions. Moreover, we have our own service center to bring out more technical solutions for you.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
+    </div> */}
 
     <div className="container mt-5">
     <div className="card">
@@ -116,6 +130,8 @@ const Products = () => {
           
           <div className="col-md-6 image-container">
     <img src={computer3} alt="Laptop" className="image1" />
+    <img src={computer3} alt="Laptop" className="image1 ipad-class mt-2" />
+    <img src={computer3} alt="Laptop" className="image1 ipad-class mt-2" />
 </div>
         </div>
    
@@ -138,7 +154,7 @@ const Products = () => {
 We assure you that we’ll install the correct software for your computers. Another thing that we guarantee you is we provide you with legal and virus-free software. Whether you need OS installation and repairing services or software installation services, our experts will just help. </p>  </div>
 
     </div>
-    <div className="row">
+    <div className="row h-100">
         <div className="col-md-6">
             <h6>Our software installation services include:</h6>
             <ul>
@@ -158,9 +174,10 @@ We assure you that we’ll install the correct software for your computers. Anot
                 <li>Linux Operating System Support and up-gradation of windows. </li>
             </ul>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 h-" >
 
-        <img src={computerr2} alt="Laptop" className="image3" />
+        <img src={computer123} alt="Laptop" className="image1" />
+        <img src={computer123} alt="Laptop" className="image1 ipad-class " />
         </div>
     </div>
 
@@ -199,6 +216,7 @@ We assure you that we’ll install the correct software for your computers. Anot
           </div>
           <div className="col-md-6 image-container">
     <img src={Hardware} alt="Laptop" className="image" />
+    <img src={Hardware} alt="Laptop" className="image ipad-class mt-3" />
 </div>
          
 

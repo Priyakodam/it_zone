@@ -1,102 +1,108 @@
 /* ItzoneProduct.css */
 .container {
-    font-family: 'Roboto', sans-serif;
-    color: #333; /* Dark grey text */
+  font-family: 'Roboto', sans-serif;
+  color: #333; /* Dark grey text */
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #a39b9b; /* Light grey color for headings */
-    font-weight: bold; /* Bold font weight for headings */
+  color: #a39b9b; /* Light grey color for headings */
+  font-weight: bold; /* Bold font weight for headings */
 }
 
 h3 {
-    margin-top: 20px; /* Vertical space above h3 headings */
-    margin-bottom: 10px; /* Vertical space below h3 headings */
+  margin-top: 20px; /* Vertical space above h3 headings */
+  margin-bottom: 10px; /* Vertical space below h3 headings */
 }
 
 p {
-    font-size: 16px; /* Suitable font size for readability */
-    line-height: 1.6; /* Spacing between lines */
-    margin-bottom: 20px; /* Vertical space below paragraphs */
+  font-size: 16px; /* Suitable font size for readability */
+  line-height: 1.6; /* Spacing between lines */
+  margin-bottom: 20px; /* Vertical space below paragraphs */
 }
 .card-img {
-    width: 100%;     /* makes the image responsive */
-    height: auto;    /* maintain aspect ratio */
-    display: block;  /* remove extra space below the image */
-  }
-  
+  width: 100%;     /* makes the image responsive */
+  height: auto;    /* maintain aspect ratio */
+  display: block;  /* remove extra space below the image */
+}
 
-  /* ItzoneProduct.css */
+
+/* ItzoneProduct.css */
 .card-body .carousel .slide {
-    background: transparent; /* Remove default background */
-  }
-  
-  .card-body .carousel .carousel-status {
-    display: none; /* Hide the default counter if not needed */
-  }
-  
-  .card-img-top {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Adjust this if you want different image fit options */
-  }
-  
-  /* Adjust the height of the text card to match the carousel */
-  .card.h-100 {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card-body {
-    flex: 1; /* Allows card-body to expand and consume available space */
-  }
-  
-  .background-container {
-    position: relative;
-    /* text-align: center; */
-    width: 100%;
-  }
-  
-  .product-image {
-    width: 70%;
-    height: auto;  /* Ensure image maintains aspect ratio */
-  }
-  
-  .text-content {
+  background: transparent; /* Remove default background */
+}
+
+.card-body .carousel .carousel-status {
+  display: none; /* Hide the default counter if not needed */
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Adjust this if you want different image fit options */
+}
+
+/* Adjust the height of the text card to match the carousel */
+.card.h-100 {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex: 1; /* Allows card-body to expand and consume available space */
+}
+
+
+/* first bg image */
+.background-container {
+  position: relative;
+  /* text-align: center; */
+  width: 100%;
+}
+
+.product-image {
+  width: 70%;
+  height: auto;  /* Ensure image maintains aspect ratio */
+}
+
+.text-content {
+  position: absolute;
+  top: 13%;  /* Start at 20% from the top */
+  left: 40%;
+  right: 0%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 992px) { /* Adjustments for iPad and similar devices */
+  .text-content  {
+
     position: absolute;
     top: 13%;  /* Start at 20% from the top */
     left: 40%;
     right: 0%;
     background: rgba(255, 255, 255, 0.9);
+
+    position: static;
+    padding: 20px;
+    margin-top: -20%;  /* Pull text content up to overlap image slightly */
+
   }
-  
-  @media (max-width: 992px) { /* Adjustments for iPad and similar devices */
-    .text-content {
-      position: static;
-      padding: 20px;
-      margin-top: -20%;  /* Pull text content up to overlap image slightly */
-    }
-    .product-image {
-      margin-left: 10%;
-      margin-right: 10%;
-      width: 80%;  /* Reduce image width with margins */
-    }
+  .product-image {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;  /* Reduce image width with margins */
   }
-  
-  @media (max-width: 768px) { /* Adjustments for mobile devices */
-    .text-content {
-      position: static;
-      margin-top: 20px;
-    }
-    .product-image {
-      width: 100%;  /* Full width for smaller devices */
-      margin: 0;  /* Reset margins */
-    }
+}
+/* End bg image */
+@media (max-width: 768px) { /* Adjustments for mobile devices */
+  .text-content  {
+    position: static;
+    margin-top: 20px;
   }
-  .content-container {
-    /* Add your styles for the container */
-    text-align: center; /* if you want to center everything */
+  .product-image {
+    width: 100%;  /* Full width for smaller devices */
+    margin: 0;  /* Reset margins */
   }
+
   
   .red-dash {
     width: 50px; /* Adjust the width as needed */
@@ -129,10 +135,49 @@ p {
     width: 100%;
   }
 
+}
+.content-container {
+  /* Add your styles for the container */
+  text-align: center; /* if you want to center everything */
+}
+
+.red-dash {
+  width: 50px; /* Adjust the width as needed */
+  height: 10px; /* Adjust the thickness of the dash */
+  background-color: red; /* The color of the dash */
+  /* Centers the dash and adds space below */
+}
+
+.discover-more-btn {
+  /* Add your styles for the button */
+  background-color: red; /* Example button color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding inside the button */
+  text-transform: uppercase; /* Uppercase button text */
+  cursor: pointer; /* Change mouse cursor on hover */
+  border-radius: 20px; /* Rounded corners for the button */
+}
+
+.discover-more-btn:hover {
+  background-color: darkred; /* Darker background on hover */
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px; /* Rounded corners for modal */
+}
+
+.image{
+  width: 100%;
+}
+
+
 /* Ensure the column is a flex container and align items centrally */
 .col-md-6.image-container {
    /* Optional: Ensures the column takes full height of its parent */
 }
+
 
 /* Update or remove unnecessary properties for .image1 if they conflict */
 .image1 {
@@ -147,3 +192,70 @@ p {
    
     width: 100%;
 }
+/* Update or remove unnecessary properties for .image1 if they conflict */
+.image1 {
+  width: 100%;
+  display: flex;
+  align-items: center; /* This will center the image vertically */
+  justify-content: center; /* This will center the image horizontally */
+  padding-top: 10%;  /* Adjust width as necessary, keeping it responsive */
+}
+
+.image3{
+ 
+  width: 100%;
+  height: 60%;
+
+}
+
+
+/* second bg image */
+.text-image {
+    position: absolute;
+    top: 13%;  /* Start at 20% from the top */
+    left: 40%;
+    right: 0%;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  @media (max-width: 992px) { 
+    .text-image {
+        position: absolute;
+        top: 30%;  /* Start at 20% from the top */
+        left: 40%;
+        right: 0%;
+        background: rgba(255, 255, 255, 0.9);
+    
+        position: static;
+        padding: 10px;
+        margin-top: -0%;  
+    }
+  }
+
+  /*end od bg image  */
+
+
+
+  
+.ipad-class {
+    display: none;
+  }
+  
+  
+  @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+      .ipad-class {
+          display: block;
+      }
+  }
+  
+  /* Alternatively, if you want to show the image on all tablet sizes, not just iPads */
+  @media only screen 
+    and (min-width: 768px) 
+    and (max-width: 1024px) {
+      .ipad-class {
+          display: block;
+      }
+  }
