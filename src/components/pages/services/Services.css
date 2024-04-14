@@ -33,15 +33,47 @@ p {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   box-sizing: border-box;
 }
+p{
+  margin-left: 12px;
+  /* font-size: 35px; */
+}
+
+h1, h2 {
+  text-align: center;
+}
 
 .service-image img {
   width: 90%;
   height: auto;
   border-radius: 15px;
+  margin-left: 15px;
 }
 
 .service-content {
   text-align: center;
+}
+
+.ipad-class {
+  display: none;
+}
+
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .ipad-class {
+        display: block;
+    }
+}
+
+/* Alternatively, if you want to show the image on all tablet sizes, not just iPads */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) {
+    .ipad-class {
+        display: block;
+    }
 }
 
 @media (min-width: 481px) {
@@ -63,5 +95,9 @@ p {
 @media (max-width: 480px) {
   p {
     font-size: 16px;
+  }
+
+  .service-content {
+    text-align: left;
   }
 }
