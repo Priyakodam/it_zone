@@ -3,13 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Services from './components/pages/services/Services';
-
-
-const Home = () => <h1>Home Page</h1>;
-const About = () => <h1>About Page</h1>;
-// const Services = () => <h1>Services Page</h1>;
-const Products = () => <h1>Products Page</h1>;
-const Contact = () => <h1>Contact Page</h1>;
+import Products from './components/pages/products/Products';
+import Home from './components/pages/home/Home';
+import About from './components/pages/about/About';
+import Contact from './components/pages/contact/Contact';
 
 function App() {
     return (
