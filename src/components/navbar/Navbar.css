@@ -1,6 +1,4 @@
 .navbar {
-
-  /* color: white; */
   padding: 10px;
   display: flex;
   align-items: center;
@@ -14,7 +12,7 @@
 .nav-links {
   list-style: none;
   display: flex;
-  margin-right: 400px;
+  margin-right: 0;
   margin-left: auto;
   font-size: 20px;
 }
@@ -25,28 +23,82 @@
 }
 
 .nav-link, .nav-links a {
-  color: blue;  
+  color: #007BFF; /* Initial color: Blue */
   text-decoration: none;
   display: block;
 }
 
-.active {
-  /* background-color: #34B6DE;  */
-  color: white; 
-  /* Consistent text color for active state */
+.nav-links a:hover {
+  color: #FFC107; /* Hover color: Amber */
+}
+
+.nav-links a:active, .active {
+  color: #e61520; /* Active color: Red */
 }
 
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 80%;
-  left: 40%;
-  
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: auto;
+  max-width: 90vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
+.show {
+  display: block;
+}
 
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 2%;
+}
 
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
 
+@media (max-width: 991px) {
+  .menu-toggle {
+      display: flex;
+  }
 
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color: #fff;
+  }
 
+  .nav-links.open {
+      display: flex;
+  }
 
+  .nav-links a:hover, .nav-links a:active, .active {
+      color: #e61520; /* Active and hover colors are red on mobile */
+  }
+
+  .dropdown-menu {
+      position: static;
+      width: 100%;
+      max-width: 100%;
+      transform: none;
+      left: 0;
+      padding-left: 10px;
+  }
+
+  .dropdown-container .row .col {
+      width: 100%;
+  }
+}
