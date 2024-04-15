@@ -50,7 +50,7 @@ const handleSubmit = async (e) => {
 
 
   return (
-    <div className='my-conatiner'>
+    <div className='my-container'>
     <div className="contact-container">
     <div className="contact-section">
       <div className="contact-info">

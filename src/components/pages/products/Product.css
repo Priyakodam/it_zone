@@ -1,16 +1,12 @@
 /* ItzoneProduct.css */
-
-
-.my-container{
-  margin-top: 100px;
-}
-
 .container {
   font-family: 'Roboto', sans-serif;
   color: #333; /* Dark grey text */
   
 }
-
+.my-container{
+  margin-bottom: 150px;
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: #464545; /* Light grey color for headings */
@@ -74,7 +70,7 @@ p {
 
 .text-content {
   position: absolute;
-  top: 20%;  
+  top: 13%;  /* Start at 20% from the top */
   left: 40%;
   right: 0%;
   background: rgba(255, 255, 255, 0.9);
@@ -181,12 +177,6 @@ p {
 }
 
 
-
-/* Ensure the column is a flex container and align items centrally */
-
-
-
-
 .image1 {
     width: 100%;
     display: flex;
@@ -219,7 +209,7 @@ p {
 /* second bg image */
 .text-image {
     position: absolute;
-    top: 20%;  /* Start at 20% from the top */
+    top: 13%;  /* Start at 20% from the top */
     left: 40%;
     right: 0%;
     background: rgba(255, 255, 255, 0.9);
@@ -267,3 +257,8 @@ p {
       }
   }
 
+  /* . @media (max-width: 992px) {
+    .enterprise{
+        
+    }
+   } */
