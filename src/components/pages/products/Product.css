@@ -173,6 +173,11 @@ p {
 }
 
 
+<<<<<<< HEAD
+=======
+/* Ensure the column is a flex container and align items centrally */
+
+>>>>>>> 3febc1328524108952990958de04cedc479256bb
 
 
 /* Update or remove unnecessary properties for .image1 if they conflict */
