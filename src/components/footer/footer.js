@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { BiAlignLeft } from 'react-icons/bi';
 
 const Footer = () => {
   return (
@@ -38,6 +39,12 @@ const styles = {
     left: 0,
     bottom: 0,
     width: '100%',
+
+    // left: 0,
+    bottom: 0,
+    width: '100%',
+    // height: '30vh',
+
     display: 'flex',
     justifyContent: 'space-around',
   },

@@ -1,4 +1,5 @@
 
+
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
@@ -17,6 +18,9 @@ import { Link } from 'react-router-dom';
 import HomeCarousel from './HomeCarousel';
 const Home = () => {
  
+
+
+
   return (
     <>
     <div className="container-fluid mt-4">
