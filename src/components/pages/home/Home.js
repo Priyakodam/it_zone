@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import image1 from '../../img/Image1.jpg';
+// import image1 from '../../img/Image1.jpg';
 import cc2 from '../../img/cc2.jpg';
 
 import part1 from '../../img/part1.jpg';
@@ -21,7 +21,7 @@ function Home() {
           ></iframe> */}
            <Carousel>
         <Carousel.Item>
-          <img src={image1} alt="Los Angeles" style={{ width: '100%', height: 'auto', maxHeight: '550px' }} />
+          {/* <img src={image1} alt="Los Angeles" style={{ width: '100%', height: 'auto', maxHeight: '550px' }} /> */}
         </Carousel.Item>
         <Carousel.Item>
           <img src={part1} alt="Chicago" style={{ width: '100%', height: 'auto', maxHeight: '550px' }} />
