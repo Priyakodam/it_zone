@@ -2,12 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/footer/footer'
 import Services from './components/pages/services/Services';
-import Products from './components/pages/products/Products';
 import Home from './components/pages/home/Home';
+import Products from './components/pages/products/Products';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
-import Footer from './components/pages/footer/Footer'
+
+
 
 function App() {
     return (

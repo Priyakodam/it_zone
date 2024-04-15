@@ -1,7 +1,6 @@
 // App.jsx
 import React from 'react';
 import Cards from "./Cards";
-// import Testimonials from "./Testimonial"
 import './About.css'; // Import CSS file
 
 
@@ -29,9 +28,6 @@ function About() {
         iT-ZONE can and does deliver significant incremental value to the realisation of our customer’s needs
         </p>
       </div>
-      {/* <div className='test'>
-      <Testimonials/>
-      </div> */}
       <div className='cards'>
       <Cards/>
       </div>
