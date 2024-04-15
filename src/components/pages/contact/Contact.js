@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from "axios";
+
 import "./Contact.css"; // Import CSS file
 import "@fortawesome/fontawesome-free/css/all.css";
 
