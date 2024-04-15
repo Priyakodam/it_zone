@@ -76,6 +76,7 @@ p {
 .narrow-button {
   width: 110px;
   padding: 10px;
+  border-radius: 30px;
 }
 
 .button-container {

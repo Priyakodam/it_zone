@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
@@ -8,11 +9,11 @@ import cc2 from "../../img/cc2.jpg";
 import part6 from '../../img/part6.jpg';
 import camera2 from '../../img/cc-camera2.webp'
 import hardware from "../../img/hardware.jpeg";
+import computer1 from '../../img/computer1.jpg'
 import { Link } from 'react-router-dom';
 import HomeCarousel from './HomeCarousel';
 const Home = () => {
  
-
   return (
     <div>
       <div className="container mt-4">
@@ -26,7 +27,7 @@ const Home = () => {
             style={{ textAlign: "justify" }}
           >
             <div className="red-dash"></div>
-            <h3>Products</h3>
+            <h3 className="text-center">Products</h3>
             <p>
               iTZ-ONE is one of the leading companies in Computer Sales and
               Services that is gaining momentum each day. Backed by a strong
@@ -54,7 +55,7 @@ const Home = () => {
           <div className="card-body">
             <div className="row">
               <div className="col-md-6 " style={{ textAlign: "justify" }}>
-                <h3 >About Us</h3>
+                <h3 className="text-center">About Us</h3>
                 <p>
                 In the IT industry, our team decided to alter direction. Now, we share our experiences to help others. Our ramp up process is 
       designed to empower your technical team or staff your company with the services they need to succeed. Ask us about the following 
@@ -71,8 +72,8 @@ const Home = () => {
     </Link>
               </div>
               <div className="col-md-6 ">
-                <img src={camera2} alt="Laptop" className="image" />
-                <img src={camera2} alt="Laptop" className="image ipad-class mt-3" />
+                <img src={cc2} alt="Laptop" className="image" />
+                <img src={cc2} alt="Laptop" className="image ipad-class mt-3" />
               </div>
             </div>
           </div>

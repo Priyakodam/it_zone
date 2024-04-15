@@ -2,6 +2,10 @@
 .container {
   font-family: 'Roboto', sans-serif;
   color: #333; /* Dark grey text */
+  
+}
+.my-container{
+  margin-bottom: 150px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -179,7 +183,6 @@ p {
 
 
 
-/* Update or remove unnecessary properties for .image1 if they conflict */
 .image1 {
     width: 100%;
     display: flex;
@@ -260,4 +263,3 @@ p {
       }
   }
 
- 

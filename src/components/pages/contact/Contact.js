@@ -48,7 +48,8 @@ const handleSubmit = async (e) => {
 
 
   return (
-    <div className="contact-container">
+    <div className='my-container'>
+    <div className="contact-container mt-5 mb-5">
       <div className="contact-section">
         <div className="contact-info">
           <h2>Contact Information</h2>
@@ -96,6 +97,7 @@ const handleSubmit = async (e) => {
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
+    </div>
     </div>
   );
 };

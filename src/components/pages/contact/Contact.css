@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  width: 80%; /* Set the width to 80% of the screen */
-  margin: 0 auto; /* Center the container horizontally */
+  width: 80%; 
+  margin: 0 auto; 
 }
 
 .contact-section {
@@ -64,3 +64,40 @@ button:hover {
 .map {
   width: 100%;
 }
+
+@media (max-width: 520px) {
+  .contact-container {
+      width: 100%; 
+      padding: 10px; 
+  }
+
+  .contact-section {
+      flex-direction: column; 
+      align-items: center; 
+  }
+
+  .contact-info, .contact-form {
+      width: 100%;
+      padding: 10px 0; 
+      border-right: none; 
+  }
+
+  .contact-form {
+      padding-top: 20px; 
+  }
+
+  button {
+      padding: 12px; 
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+      font-size: 16px; 
+  }
+
+  .map iframe {
+      height: 300px;
+  }
+}
+

@@ -45,8 +45,7 @@ const styles = {
     flex: 1,
   },
   iconContainer: {
-    marginBottom: '5px',
-    marginTop: '10px',
+    marginBottom: '10px',
   },
   icon: {
     fontSize: '24px',
