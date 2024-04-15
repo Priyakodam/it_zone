@@ -5,6 +5,7 @@
   
 }
 .my-container{
+  margin-top: 150px;
   margin-bottom: 150px;
 }
 
@@ -229,11 +230,7 @@ p {
     }
   }
 
-  /*end od bg image  */
-
-
-
-  
+ 
 .ipad-class {
     display: none;
   }
@@ -257,8 +254,36 @@ p {
       }
   }
 
-  /* . @media (max-width: 992px) {
-    .enterprise{
-        
+ 
+  @keyframes slideFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
     }
-   } */
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+ 
+  .left-animate {
+    animation: slideFromRight 1s ease-out forwards;
+  }
+  
+  .right-animate {
+    animation: slideFromLeft 1s ease-out forwards;
+  }
+  
+

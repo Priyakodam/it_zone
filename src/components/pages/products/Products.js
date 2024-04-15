@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Product.css";
 import { Carousel } from "react-responsive-carousel";
@@ -18,10 +18,36 @@ const Products = () => {
 
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
+   // Refs for animating elements on scroll
+   const leftAnimateRef = useRef(null);
+   const rightAnimateRef = useRef(null);
+ 
+   useEffect(() => {
+     const observer = new IntersectionObserver(
+       (entries, observer) => {
+         entries.forEach(entry => {
+           if (entry.isIntersecting) {
+             entry.target.classList.add('animate-on-scroll');
+             observer.unobserve(entry.target); // Optional: Unobserve after animation
+           }
+         });
+       },
+       { threshold: 0.5 } // Trigger when 50% of the element is in view
+     );
+ 
+     if (leftAnimateRef.current) {
+       observer.observe(leftAnimateRef.current);
+     }
+     if (rightAnimateRef.current) {
+       observer.observe(rightAnimateRef.current);
+     }
+ 
+     return () => observer.disconnect(); // Cleanup observer on component unmount
+   }, []);
 
   return (
     <div className="my-container">
-      <div className="container mt-5">
+      <div className="container  mt-5">
         <div className="row">
           <div className="col-md-12 text-center">
             <h1>Products</h1>
@@ -82,31 +108,31 @@ const Products = () => {
   </div>
 </div> */}
 
-      <div className="container mt-5">
-        <div className="card">
-          <div className="card-body">
-            <div className="row">
-              <div className="col-md-6 " style={{ textAlign: "justify" }}>
-                <h3 className="text-center">CCTV Servies</h3>
-                <p>
-                  iTZ-ONE offers an Annual Maintenance Contract that will help
-                  you install a CCTV camera on your business premises, at the
-                  home, factory, warehouse, offices, etc so that you can keep an
-                  eye on all activities going on and also on those who enter
-                  your premises. Moreover, we help you to keep your CCTV camera
-                  updated and in perfect working condition so that you live a
-                  peaceful life.We offer one of the best services in the city at
-                  a very economical rate.
-                </p>
-              </div>
-              <div className="col-md-6 ">
-                <img src={cc2} alt="Laptop" className="image" />
-                <img src={cc2} alt="Laptop" className="image ipad-class mt-3" />
-              </div>
-            </div>
-          </div>
+<div className="container mt-5">
+  <div className="card">
+    <div className="card-body">
+      <div className="row">
+      <div className="col-md-6 left-animate" ref={leftAnimateRef} style={{ textAlign: "justify" }}>
+          <h3 className="text-center">CCTV Services</h3>
+          <p>
+            iTZ-ONE offers an Annual Maintenance Contract that will help
+            you install a CCTV camera on your business premises, at the
+            home, factory, warehouse, offices, etc so that you can keep an
+            eye on all activities going on and also on those who enter
+            your premises. Moreover, we help you to keep your CCTV camera
+            updated and in perfect working condition so that you live a
+            peaceful life. We offer one of the best services in the city at
+            a very economical rate.
+          </p>
+        </div>
+        <div className="col-md-6 right-animate" ref={rightAnimateRef}>
+          <img src={cc2} alt="CCTV Camera" className="image" />
+          <img src={cc2} alt="CCTV Camera" className="image ipad-class mt-3" />
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
       <div className="container mt-5">
         <div className="background-container">
