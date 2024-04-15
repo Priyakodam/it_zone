@@ -9,13 +9,14 @@ import Products from './components/pages/products/Products';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
 import Carousel from './components/pages/services/Carousel';
-
+import ScrollBar from './components/scroll/ScrollBar';
 
 function App() {
     return (
         <Router>
             <div>
                 <Navbar />
+                <ScrollBar />
                 <Routes>
                     <Route path="/" exact element={<Home/>} />
                     <Route path="/about" element={<About/>} />

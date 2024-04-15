@@ -2,13 +2,14 @@
   padding: 0;
   display: flex;
   justify-content: center;
-  position: fixed; /* Updated from relative to fixed */
+  position: sticky; /* Updated from relative to fixed */
   top: 0; /* Ensures it stays at the top */
   left: 0; /* Aligns to the left edge */
   width: 100%;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   z-index: 1000;
+  
 }
 
 .navbar-container {
