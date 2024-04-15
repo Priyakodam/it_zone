@@ -33,7 +33,7 @@ const styles = {
     backgroundColor: '#333',
     color: '#fff',
     textAlign: 'center',
-    padding: '20px',
+    padding: '5px',
     position: 'fixed',
     left: 0,
     bottom: 0,

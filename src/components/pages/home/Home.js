@@ -1,25 +1,38 @@
 import React from 'react';
+import { Carousel } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import image1 from '../../img/Image1.jpg';
+import cc2 from '../../img/cc2.jpg';
+
+import part1 from '../../img/part1.jpg';
 
 function Home() {
   return (
     <div className='container'>
       <div className='row'>
         <div className='col-md-12'>
-          <iframe
+          {/* <iframe
             width="100%" 
             height='500px'
             src="https://www.youtube.com/embed/VKuNHLgrQno"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe>
+          ></iframe> */}
+           <Carousel>
+        <Carousel.Item>
+          <img src={image1} alt="Los Angeles" style={{ width: '100%', height: 'auto', maxHeight: '550px' }} />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src={part1} alt="Chicago" style={{ width: '100%', height: 'auto', maxHeight: '550px' }} />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src={cc2} alt="New york" style={{ width: '100%', height: 'auto', maxHeight: '550px' }} />
+        </Carousel.Item>
+      </Carousel>
         </div>
       </div>
-      <div className='row'>
-        <div className='col-md-12'>
-          Laptops have become an essential part of our daily lives, serving various purposes from work to entertainment. However, like any electronic device, laptops are not immune to problems and malfunctions. In this article, we will explore the ten most common laptop repair problems and provide practical solutions to help you repair them. Whether you are a tech-savvy enthusiast or a casual user, this guide will empower you to tackle these issues and extend the lifespan of your laptop.
-        </div>
-      </div>
+      
     </div>
   );
 }
