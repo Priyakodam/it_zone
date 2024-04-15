@@ -1,10 +1,13 @@
+.my-conatiner{
+  margin-bottom: 150px;
+}
 .contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  width: 80%; 
-  margin: 0 auto; 
+  width: 80%; /* Set the width to 80% of the screen */
+  margin: 0 auto; /* Center the container horizontally */
 }
 
 .contact-section {
@@ -65,6 +68,7 @@ button:hover {
   width: 100%;
 }
 
+
 @media (max-width: 520px) {
   .contact-container {
       width: 100%; 
@@ -100,4 +104,3 @@ button:hover {
       height: 300px;
   }
 }
-
