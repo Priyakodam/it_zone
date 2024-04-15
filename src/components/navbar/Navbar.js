@@ -17,7 +17,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="navbar">
+        <nav className="navbar fixed-top">
             <div className="navbar-container">
                 <img src={logo} alt="Logo" className="logo" />
                 <div className="menu-toggle" onClick={toggleMenu}>

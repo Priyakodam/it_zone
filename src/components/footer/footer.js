@@ -1,10 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { BiAlignLeft } from 'react-icons/bi';
 
 const Footer = () => {
   return (
-    <div className='container mt-5'>
     <footer style={styles.footer}>
         <div style={styles.column}>
         <p style={styles.workingTime}>WORKING TIME</p>
@@ -26,12 +26,10 @@ const Footer = () => {
       </div>
       
     </footer>
-    </div>
   );
 };
 
 const styles = {
-
   footer: {
     backgroundColor: '#333',
     color: '#fff',
@@ -41,6 +39,12 @@ const styles = {
     left: 0,
     bottom: 0,
     width: '100%',
+
+    // left: 0,
+    bottom: 0,
+    width: '100%',
+    // height: '30vh',
+
     display: 'flex',
     justifyContent: 'space-around',
   },
