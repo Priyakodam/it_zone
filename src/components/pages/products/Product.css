@@ -5,7 +5,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #a39b9b; /* Light grey color for headings */
+  color: #464545; /* Light grey color for headings */
   font-weight: bold; /* Bold font weight for headings */
 }
 
@@ -66,7 +66,7 @@ p {
 
 .text-content {
   position: absolute;
-  top: 13%;  /* Start at 20% from the top */
+  top: 20%;  
   left: 40%;
   right: 0%;
   background: rgba(255, 255, 255, 0.9);
@@ -173,10 +173,10 @@ p {
 }
 
 
+
 /* Ensure the column is a flex container and align items centrally */
-.col-md-6.image-container {
-   /* Optional: Ensures the column takes full height of its parent */
-}
+
+
 
 
 /* Update or remove unnecessary properties for .image1 if they conflict */
@@ -212,7 +212,7 @@ p {
 /* second bg image */
 .text-image {
     position: absolute;
-    top: 13%;  /* Start at 20% from the top */
+    top: 20%;  /* Start at 20% from the top */
     left: 40%;
     right: 0%;
     background: rgba(255, 255, 255, 0.9);
@@ -259,3 +259,5 @@ p {
           display: block;
       }
   }
+
+ 

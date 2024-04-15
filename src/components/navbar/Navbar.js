@@ -28,16 +28,18 @@ const Navbar = () => {
                 <li>
                     <NavLink exact to="/" activeClassName="active" onClick={() => handleSetActive("home")}>Home</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/about" activeClassName="active" onClick={() => handleSetActive("about")}>About</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/services" activeClassName="active" onClick={() => handleSetActive("services")}>Services</NavLink>
-                </li>
                 <li >
                    
                     <NavLink to="/products" activeClassName="active" onClick={() => handleSetActive("products")}>Products</NavLink>
                 </li>
+                <li>
+                    <NavLink to="/services" activeClassName="active" onClick={() => handleSetActive("services")}>Services</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/about" activeClassName="active" onClick={() => handleSetActive("about")}>About</NavLink>
+                </li>
+                
+                
                 <li>
                     <NavLink to="/contact" activeClassName="active" onClick={() => handleSetActive("contact")}>Contact</NavLink>
                 </li>
