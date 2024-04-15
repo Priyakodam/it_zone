@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Services from './components/pages/services/Services';
-import Products from './components/pages/products/Products';
+import Footer from './components/footer/footer';
 import Home from './components/pages/home/Home';
+import Products from './components/pages/products/Products';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
 import Carousel from './components/pages/services/Carousel';
+
 
 function App() {
     return (
@@ -22,6 +24,7 @@ function App() {
                     <Route path="/contact" element={<Contact/>} />
                     <Route path="/carousel" element={<Carousel/>} />
                 </Routes>
+                <Footer/>
             </div>
         </Router>
     );
