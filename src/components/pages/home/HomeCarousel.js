@@ -10,7 +10,7 @@ import applelaptop from '../../img/applelaptop.jpg'
 
 function Banner() {
   return (
-    <div className='container'>
+    <div className='carousel-container'>
       <div className='row'>
         <div className='col-12'> 
            <Carousel>

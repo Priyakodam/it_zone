@@ -22,12 +22,12 @@ const Home = () => {
   return (
     <>
      <div className="homecontainer mt-5"></div>
-    <div className="homecontainer mt-5">
+    {/* <div className="homecontainer mt-5">
       <HomeCarousel />
-      </div>
-      {/* <div className="homecontainer mt-5">
-      <HomeVideo />
       </div> */}
+      <div className="homecontainer1 mt-5">
+      <HomeVideo />
+      </div>
       <div className="homecontainer mt-5">
       <div className="home-cards">
     <div className="home-card ">
@@ -138,9 +138,7 @@ const Home = () => {
                 In the IT industry, our team decided to alter direction. Now, we share our experiences to help others. Our ramp up process is 
       designed to empower your technical team or staff your company with the services they need to succeed. Ask us about the following 
       services: iTZ-ONE offers rapid, cost-effective IT solutions to the business challenges faced by companies through its in-depth 
-      experience and knowledge, technological expertise, and project management skills. iT-ZONE has earned an excellent reputation as
-      a solution-oriented organisation specialising in assisting its clients in developing innovative 
-      strategies, the crafting of business effective technology solutions and the successful execution of highly complex projects. 
+      experience and knowledge, technological expertise, and project management skills. 
 
                 </p>
                 <Link to="/about">
@@ -158,7 +156,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="homecontainer1 mt-5">
+      <div className="homecontainer2 mt-5">
         <div className="background-homecontainer">
           <img src={part6} alt="Laptop" className="product-image" />
           <div
