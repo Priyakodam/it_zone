@@ -8,7 +8,8 @@ import Carousel from './Carousel';
 
 const Services = () => {
   return (
-    <div className='container'>
+    <div className='my-container'>
+    <div className='container mt-5'>
       <Carousel />
       <div className="services-container">
         <h2 className='text-center'>Our Services</h2>
@@ -66,6 +67,7 @@ Stay “anywhere”, View from “anywhere” – free mobile app view</p>
           <img src={repairImage1} alt="Data Backup & Recovery" className='ipad-class mt-2'/>
         </div>
       </div>
+    </div>
     </div>
   );
 }

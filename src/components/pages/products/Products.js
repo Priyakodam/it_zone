@@ -20,15 +20,15 @@ const Products = () => {
   const handleShow = () => setShowModal(true);
 
   return (
-    <div>
-      <div className="container">
+    <div className="my-container">
+      <div className="container mt-5">
         <div className="row">
           <div className="col-md-12 text-center">
             <h1>Products</h1>
           </div>
         </div>
       </div>
-      <div className="container mt-5">
+      <div className="container ">
         <div className="background-container">
           <img src={lap} alt="Laptop" className="product-image" />
           <div
@@ -290,7 +290,7 @@ const Products = () => {
 
    
 
-      <div className="container mt-5 mb-5">
+      <div className="container container-product mt-5 ">
         <div className="card">
           <div className="card-body">
             <div className="row">

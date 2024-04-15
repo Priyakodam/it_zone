@@ -2,6 +2,10 @@
 .container {
   font-family: 'Roboto', sans-serif;
   color: #333; /* Dark grey text */
+  
+}
+.my-container{
+  margin-bottom: 150px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -173,14 +177,6 @@ p {
 }
 
 
-<<<<<<< HEAD
-=======
-/* Ensure the column is a flex container and align items centrally */
-
->>>>>>> 3febc1328524108952990958de04cedc479256bb
-
-
-/* Update or remove unnecessary properties for .image1 if they conflict */
 .image1 {
     width: 100%;
     display: flex;
@@ -261,8 +257,8 @@ p {
       }
   }
 
-  . @media (max-width: 992px) {
+  /* . @media (max-width: 992px) {
     .enterprise{
         
     }
-   }
+   } */

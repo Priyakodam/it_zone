@@ -8,6 +8,7 @@ import './About.css'; // Import CSS file
 function About() {
 
   return (
+    <div className='my-container'>
     <div className="about">
       {/* <h3 className='column_right h2'>ABOUT</h3> */}
       <div className="column_left ">
@@ -35,6 +36,7 @@ function About() {
       <div className='cards'>
       <Cards/>
       </div>
+    </div>
     </div>
   );
 }

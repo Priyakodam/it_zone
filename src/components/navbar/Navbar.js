@@ -9,7 +9,7 @@ const Navbar = () => {
 
     const handleSetActive = (link) => {
         setActive(active !== link ? link : "");
-        setIsOpen(false); // Close the menu whenever an item is clicked
+        setIsOpen(false);
     };
 
     const toggleMenu = () => {
@@ -18,32 +18,31 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <img src={logo} alt="Logo" className="logo" />
-            <div className="menu-toggle" onClick={toggleMenu}>
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
+            <div className="navbar-container">
+                <img src={logo} alt="Logo" className="logo" />
+                <div className="menu-toggle" onClick={toggleMenu}>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                </div>
+                <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+                    <li>
+                        <NavLink exact to="/" activeClassName="active" onClick={() => handleSetActive("home")}>Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/products" activeClassName="active" onClick={() => handleSetActive("products")}>Products</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/services" activeClassName="active" onClick={() => handleSetActive("services")}>Services</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/about" activeClassName="active" onClick={() => handleSetActive("about")}>About</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/contact" activeClassName="active" onClick={() => handleSetActive("contact")}>Contact</NavLink>
+                    </li>
+                </ul>
             </div>
-            <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-                <li>
-                    <NavLink exact to="/" activeClassName="active" onClick={() => handleSetActive("home")}>Home</NavLink>
-                </li>
-                <li >
-                   
-                    <NavLink to="/products" activeClassName="active" onClick={() => handleSetActive("products")}>Products</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/services" activeClassName="active" onClick={() => handleSetActive("services")}>Services</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/about" activeClassName="active" onClick={() => handleSetActive("about")}>About</NavLink>
-                </li>
-                
-                
-                <li>
-                    <NavLink to="/contact" activeClassName="active" onClick={() => handleSetActive("contact")}>Contact</NavLink>
-                </li>
-            </ul>
         </nav>
     );
 };

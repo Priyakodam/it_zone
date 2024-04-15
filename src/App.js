@@ -24,6 +24,7 @@ function App() {
                     <Route path="/contact" element={<Contact/>} />
                     <Route path="/carousel" element={<Carousel/>} />
                 </Routes>
+                
                 <Footer/>
             </div>
         </Router>
