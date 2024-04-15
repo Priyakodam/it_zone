@@ -1,16 +1,9 @@
 /* ItzoneProduct.css */
-
-
-.my-container{
-  margin-top: 100px;
-}
-
 .container {
   font-family: 'Roboto', sans-serif;
   color: #333; /* Dark grey text */
-  
+  margin-bottom: 100px;
 }
-
 
 h1, h2, h3, h4, h5, h6 {
   color: #464545; /* Light grey color for headings */
@@ -27,7 +20,70 @@ p {
   line-height: 1.6; /* Spacing between lines */
   margin-bottom: 20px; /* Vertical space below paragraphs */
 }
-.card-img {
+/* ServiceCard.css */
+/* Base styles */
+.service-card {
+  max-width: 23%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for zoom effect and background color */
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Zoom in effect on hover */
+  background-color: #f2f2f2; /* Light grey background on hover */
+}
+
+.service-card.clicked {
+  transform: scale(0.95);
+}
+
+.service-img {
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  max-width: 100%; /* Set the width of the image */
+  height: 150px;
+  border-radius: 8px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #212ea0;
+}
+
+.service-card p {
+  color: #676767;
+  margin: 10px 0;
+  align-items: start;
+  text-align: justify;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .service-card {
+    max-width: 48%; /* Display two cards per row on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service-card {
+    max-width: 100%; /* Display one card per row on even smaller screens */
+  }
+}
+
+
+
+.aboutcard-img {
   width: 100%;     /* makes the image responsive */
   height: auto;    /* maintain aspect ratio */
   display: block;  /* remove extra space below the image */
@@ -35,27 +91,27 @@ p {
 
 
 /* ItzoneProduct.css */
-.card-body .carousel .slide {
+.aboutcard-body .carousel .slide {
   background: transparent; /* Remove default background */
 }
 
-.card-body .carousel .carousel-status {
+.aboutcard-body .carousel .carousel-status {
   display: none; /* Hide the default counter if not needed */
 }
 
-.card-img-top {
+.aboutcard-img-top {
   width: 100%;
   height: auto;
   object-fit: cover; /* Adjust this if you want different image fit options */
 }
 
 /* Adjust the height of the text card to match the carousel */
-.card.h-100 {
+.aboutcard.h-100 {
   display: flex;
   flex-direction: column;
 }
 
-.card-body {
+.aboutcard-body {
   flex: 1; /* Allows card-body to expand and consume available space */
 }
 
@@ -78,6 +134,23 @@ p {
   left: 40%;
   right: 0%;
   background: rgba(255, 255, 255, 0.9);
+}
+
+.narrow-button {
+  width: 110px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  margin-top: 20px;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+a {
+  text-decoration: none;
 }
 
 @media (max-width: 992px) { /* Adjustments for iPad and similar devices */
@@ -187,6 +260,7 @@ p {
 
 
 
+/* Update or remove unnecessary properties for .image1 if they conflict */
 .image1 {
     width: 100%;
     display: flex;
@@ -267,3 +341,4 @@ p {
       }
   }
 
+ 

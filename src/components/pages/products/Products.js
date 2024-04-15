@@ -32,7 +32,7 @@ const Products = () => {
         <div className="background-container">
           <img src={lap} alt="Laptop" className="product-image" />
           <div
-            className="text-content bg-white p-5"
+            className="text-content bg-white p-5 "
             style={{ textAlign: "justify" }}
           >
             <div className="red-dash"></div>
