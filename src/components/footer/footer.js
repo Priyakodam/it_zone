@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className='container mt-5'>
     <footer style={styles.footer}>
-        <div style={styles.column}>
+      <div style={styles.column}>
         <p style={styles.workingTime}>WORKING TIME</p>
         <p style={styles.workingTime}>Mon - Sat: 09:00 AM - 06:00 PM</p>
       </div>
@@ -22,9 +22,22 @@ const Footer = () => {
             <FontAwesomeIcon icon={faFacebook} style={styles.icon} />
           </a>
         </div>
-        <p style={styles.text}>© 2024 IT ZONE</p>
+        <p style={styles.text}>© 2024 IT-ZONE</p>
       </div>
-      
+      <div style={{ ...styles.column, ...styles.fullWidth }}>
+        <hr/>
+        <div style={{...styles.row}}>
+        <p style={styles.footerText}>
+        © 2024 IT-ZONE
+        </p>
+        <p style={styles.footerText}>
+         Privacy Notice
+        </p>
+        <p style={styles.footerText}>
+         Change cookie settings
+        </p>
+        </div>
+      </div>
     </footer>
     </div>
   );
@@ -37,18 +50,23 @@ const styles = {
     color: '#fff',
     textAlign: 'center',
     padding: '5px',
-    position: 'fixed',
     left: 0,
     bottom: 0,
     width: '100%',
+    // height: '30vh',
     display: 'flex',
     justifyContent: 'space-around',
+    paddingTop: '20px',
+    flexWrap: 'wrap', // Allow flex items to wrap
   },
   column: {
-    flex: 1,
+    flex: '1 1 50%', // Each column takes 50% width
+    textAlign: 'center',
+    // marginBottom: '10px',
+    paddingTop:"-50px"
   },
   iconContainer: {
-    marginBottom: '10px',
+    paddingTop: '10px',
   },
   icon: {
     fontSize: '24px',
@@ -60,6 +78,18 @@ const styles = {
     margin: '10px 0 0',
     fontSize: '14px',
   },
+  footerText: {
+    fontSize: '12px',
+    marginTop: '10px',
+  },
+  fullWidth: {
+    flexBasis: '100%', // Take full width when wrapped
+  },
+  row:{
+    display:"flex",
+    justifyContent: 'space-around',
+    // flexWrap: 'wrap', 
+  }
 };
 
 export default Footer;

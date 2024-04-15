@@ -22,12 +22,13 @@
 .column_left {
   flex-basis: 40%;
   position: relative;
+  margin-top: -150px;
 }
 .column_right {
   flex-basis: 56%;
 }
 .about-img {
-  width: 100%;
+  width: 80vw;
   border-radius: 10px;
 }
 .play-img {
@@ -67,6 +68,7 @@
     flex-basis: 100%;
     margin: 20px;
     order: 1; /* Change the order to 1 */
+    margin-top: -100px;
   }
   .column_right {
     flex-basis: 100%;
