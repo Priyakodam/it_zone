@@ -290,7 +290,7 @@ const Products = () => {
 
    
 
-      <div className="container container-product mt-5 ">
+      <div className="container mt-5 ">
         <div className="card">
           <div className="card-body">
             <div className="row">
