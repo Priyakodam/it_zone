@@ -16,43 +16,89 @@ import hardware from "../../img/hardware.jpeg";
 import computer1 from '../../img/computer1.jpg'
 import { Link } from 'react-router-dom';
 import HomeCarousel from './HomeCarousel';
+import HomeVideo from './HomeVideo';
 const Home = () => {
  
-
-
-
   return (
     <>
-    <div className="container-fluid mt-4">
+     <div className="homecontainer mt-5"></div>
+    <div className="homecontainer mt-5">
       <HomeCarousel />
       </div>
-      <div className="container mt-5">
-      <div className="service-cards">
-    <div className="service-card ">
+      {/* <div className="homecontainer mt-5">
+      <HomeVideo />
+      </div> */}
+      <div className="homecontainer mt-5">
+      <div className="home-cards">
+    <div className="home-card ">
       <img src={cc3} alt="" className="service-img "  />
       <h3>Our business areas</h3>
       <p>IT-Zone’s operations are organized into four global business areas, which in turn are made up of 21 divisions.</p>
     </div>
-    <div className="service-card ">
+    <div className="home-card ">
       <img src={data3} alt="" className="service-img" />
       <h3>Contact us</h3>
       <p>Get in touch with IT-Zone and find the right resources to help.</p>
     </div>
-    <div className="service-card ">
+    <div className="home-card ">
       <img src={lap} alt="" className="service-img" />
       <h3>Our purpose</h3>
       <p>Our purpose is at the core of who we are and what we do.</p>
     </div>
-    <div className="service-card ">
+    <div className="home-card ">
       <img src={cc2} alt="" className="service-img" />
       <h3>Technology and innovation</h3>
       <p>IT-Zone delivers end-to-end value by driving advances across a wide spectrum of industrial technologies.</p>
     </div>
     </div>
       </div>
-    <div>
-      <div className="container mt-5">
-        <div className="background-container">
+    
+      {/* <div className="homecontainer mt-5">
+        <h1 >ITZONE innovations at work</h1>
+      <div className="row">
+        <div className="col-md-6 mb-3">
+          <div className="card">
+          <img src={cc2} className="card-img-top" alt="Card 1" style={{width: "100%", height: "400px", objectFit: "cover", padding: "10px"}}/>
+            <div className="card-body">
+              <h4>Technology Solutions</h4>
+              <p className="card-text"> IT Zone may be innovating in areas such as cloud computing, artificial intelligence, machine learning, Internet of Things (IoT), blockchain, cybersecurity, and data analytics. They might be developing new software products, or services that leverage these technologies to solve business challenges or improve efficiency.</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6 mb-3">
+          <div className="card">
+          <img src={cc2} className="card-img-top" alt="Card 1" style={{width: "100%", height: "400px", objectFit: "cover", padding: "10px"}}/>
+            <div className="card-body">
+              <h4>Emerging Technologies</h4>
+              <p className="card-text"> Keeping an eye on emerging technologies such as quantum computing, augmented reality (AR), virtual reality (VR), and 5G networks, IT Zone may be investing in research and development to stay ahead of the curve and capitalize on future opportunities.</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6 mb-3">
+          <div className="card">
+          <img src={cc2} className="card-img-top" alt="Card 1" style={{width: "100%", height: "400px", objectFit: "cover", padding: "10px"}}/>
+            <div className="card-body">
+              <h4>User Experience (UX) and Design</h4>
+              <p className="card-text">  IT Zone could be focusing on improving the user experience of their products and services through innovative design, intuitive interfaces, and seamless integration across devices and platforms.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="col-md-6 mb-3">
+          <div className="card">
+          <img src={cc2} className="card-img-top" alt="Card 1" style={{width: "100%", height: "400px", objectFit: "cover", padding: "10px"}}/>
+            <div className="card-body">
+              <h4>Sustainability and Green IT</h4>
+              <p className="card-text">  IT Zone might be exploring ways to reduce the environmental impact of their technology solutions through initiatives such as energy-efficient data centers, eco-friendly hardware design, and carbon footprint reduction strategies.</p>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div> */}
+
+      <div className="homecontainer mt-5">
+        <div className="background-homecontainer">
           <img src={cc5} alt="Laptop" className="product-image" />
           <div
             className="text-content bg-white p-5 "
@@ -73,8 +119,8 @@ const Home = () => {
               view more
             </Button> */}
             <Link to="/products">
-      <div className="button-container">
-        <button className="btn btn-primary narrow-button">Learn More</button>
+      <div className="button-homecontainer">
+        <button className="btn btn-primary narrow-button">Explore More</button>
       </div>
     </Link>
 
@@ -82,9 +128,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="container mt-5">
-        <div className="aboutcard">
-          <div className="aboutcard-body">
+      <div className="homecontainer mt-5">
+        <div className="card">
+          <div className="card-body">
             <div className="row">
               <div className="col-md-6 " style={{ textAlign: "justify" }}>
                 <h3 className="text-center">About Us</h3>
@@ -98,8 +144,8 @@ const Home = () => {
 
                 </p>
                 <Link to="/about">
-      <div className="button-container">
-        <button className="btn btn-primary narrow-button">Learn More</button>
+      <div className="button-homecontainer">
+        <button className="btn btn-primary narrow-button">Explore More</button>
       </div>
     </Link>
               </div>
@@ -107,13 +153,13 @@ const Home = () => {
                 <img src={cc2} alt="Laptop" className="image" />
                 <img src={cc2} alt="Laptop" className="image ipad-class mt-3" />
               </div>
-            </div>
+              </div>
           </div>
         </div>
       </div>
 
-      <div className="container mt-5">
-        <div className="background-container">
+      <div className="homecontainer1 mt-5">
+        <div className="background-homecontainer">
           <img src={part6} alt="Laptop" className="product-image" />
           <div
             className="text-content text-image bg-white p-5"
@@ -130,8 +176,8 @@ const Home = () => {
               view more
             </Button> */}
             <Link to="/services">
-      <div className="button-container">
-        <button className="btn btn-primary narrow-button">Learn More</button>
+      <div className="button-homecontainer">
+        <button className="btn btn-primary narrow-button">Explore More</button>
       </div>
     </Link>
           </div>
@@ -139,50 +185,8 @@ const Home = () => {
       </div>
       
 
-      {/* <div className="container mt-5">
-        <div className="card">
-          <div className="card-body">
-            <div className="row">
-              <div className="col-md-6 " style={{ textAlign: "justify" }}>
-                <h3 className="text-center">Enterprise Wi-Fi Solutions</h3>
-                <p>
-                  Today, businesses need fast and reliable internet connectivity
-                  to be productive. This is true, especially in sectors where
-                  companies utilize machine learning and artificial intelligence
-                  in their systems. This need has led to the rise of enterprise
-                  Wi-Fi solutions. These are advanced networks that use
-                  strategic design, more access points, and better equipment to
-                  create reliable web connectivity for business users.
-                  Enterprise Wi-Fi utilizes slightly different management
-                  methods and protocols compared to consumer networks. The
-                  equipment can support bigger loads without being affected by
-                  dropped or dead signals. An administrator controls access so
-                  that only authorized people are able to connect. In short,
-                  enterprise Wi-Fi is an advanced version of home Wi-Fi built to
-                  manage the greater demands of public institutions and
-                  businesses.
-                </p>
-              </div>
 
-              <div className="col-md-6 image-container">
-                <img src={computer3} alt="Laptop" className="image1" />
-                <img
-                  src={computer3}
-                  alt="Laptop"
-                  className="image1 ipad-class mt-2"
-                />
-                <img
-                  src={computer3}
-                  alt="Laptop"
-                  className="image1 ipad-class mt-2"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
-    </div>
+    
     </>
   );
 };

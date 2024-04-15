@@ -1,28 +1,40 @@
-/* ItzoneProduct.css */
-.container {
+
+.homecontainer {
   font-family: 'Roboto', sans-serif;
-  color: #333; /* Dark grey text */
-  margin-bottom: 100px;
+  color: black; 
+  margin-left: 100px;
+  margin-right: 100px;
+  
+}
+.homecontainer1 {
+  font-family: 'Roboto', sans-serif;
+  color: black; 
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 150px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #464545; /* Light grey color for headings */
-  font-weight: bold; /* Bold font weight for headings */
+  color: black;
+  font-weight: bold;
 }
 
 h3 {
-  margin-top: 20px; /* Vertical space above h3 headings */
-  margin-bottom: 10px; /* Vertical space below h3 headings */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+homeheading{
+  color: 'black';
 }
 
 p {
-  font-size: 16px; /* Suitable font size for readability */
-  line-height: 1.6; /* Spacing between lines */
-  margin-bottom: 20px; /* Vertical space below paragraphs */
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
-/* ServiceCard.css */
-/* Base styles */
-.service-card {
+
+.home-card {
   max-width: 23%;
   background-color: white;
   padding: 20px;
@@ -32,12 +44,12 @@ p {
   transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for zoom effect and background color */
 }
 
-.service-card:hover {
+.home-card:hover {
   transform: scale(1.05); /* Zoom in effect on hover */
   background-color: #f2f2f2; /* Light grey background on hover */
 }
 
-.service-card.clicked {
+.home-card.clicked {
   transform: scale(0.95);
 }
 
@@ -49,20 +61,20 @@ p {
   border-radius: 8px;
 }
 
-.service-card h3 {
+.home-card h3 {
   font-size: 18px;
   margin: 10px 0;
   color: #212ea0;
 }
 
-.service-card p {
+.home-card p {
   color: #676767;
   margin: 10px 0;
   align-items: start;
   text-align: justify;
 }
 
-.service-cards {
+.home-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -70,20 +82,22 @@ p {
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
-  .service-card {
+  .home-card {
     max-width: 48%; /* Display two cards per row on smaller screens */
   }
 }
 
 @media screen and (max-width: 480px) {
-  .service-card {
+  .home-card {
     max-width: 100%; /* Display one card per row on even smaller screens */
   }
 }
 
+.card{
+ border: 1px solid grey;
+}
 
-
-.aboutcard-img {
+.card-img {
   width: 100%;     /* makes the image responsive */
   height: auto;    /* maintain aspect ratio */
   display: block;  /* remove extra space below the image */
@@ -91,33 +105,33 @@ p {
 
 
 /* ItzoneProduct.css */
-.aboutcard-body .carousel .slide {
+.card-body .carousel .slide {
   background: transparent; /* Remove default background */
 }
 
-.aboutcard-body .carousel .carousel-status {
+.card-body .carousel .carousel-status {
   display: none; /* Hide the default counter if not needed */
 }
 
-.aboutcard-img-top {
+.card-img-top {
   width: 100%;
   height: auto;
   object-fit: cover; /* Adjust this if you want different image fit options */
 }
 
 /* Adjust the height of the text card to match the carousel */
-.aboutcard.h-100 {
+.card.h-100 {
   display: flex;
   flex-direction: column;
 }
 
-.aboutcard-body {
+.card-body {
   flex: 1; /* Allows card-body to expand and consume available space */
 }
 
 
 /* first bg image */
-.background-container {
+.background-homecontainer {
   position: relative;
   /* text-align: center; */
   width: 100%;
@@ -137,12 +151,12 @@ p {
 }
 
 .narrow-button {
-  width: 110px;
+  width: 130px;
   padding: 10px;
   border-radius: 30px;
 }
 
-.button-container {
+.button-homecontainer {
   display: flex;
   justify-content: flex-end; /* Align items to the right */
   margin-top: 20px;
@@ -217,8 +231,8 @@ a {
   }
 
 }
-.content-container {
-  /* Add your styles for the container */
+.content-homecontainer {
+  /* Add your styles for the homecontainer */
   text-align: center; /* if you want to center everything */
 }
 
@@ -255,7 +269,7 @@ a {
 
 
 
-/* Ensure the column is a flex container and align items centrally */
+/* Ensure the column is a flex homecontainer and align items centrally */
 
 
 
