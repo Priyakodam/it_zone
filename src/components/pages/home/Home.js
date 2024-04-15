@@ -1,15 +1,13 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-<<<<<<< HEAD
 // import image1 from '../../img/Image1.jpg';
-=======
+
 
 // import image1 from '../../img/Image1.jpg';
 
 import image1 from '../../img/4.jpg';
 
->>>>>>> edd051955363c6b4d221aa2ebf98f6bf800b0808
 import cc2 from '../../img/cc2.jpg';
 
 import part1 from '../../img/part1.jpg';

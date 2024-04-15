@@ -52,7 +52,7 @@ const styles = {
     padding: '5px',
     left: 0,
     bottom: 0,
-    width: '100vw',
+    width: '100%',
     // height: '30vh',
     display: 'flex',
     justifyContent: 'space-around',
