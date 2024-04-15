@@ -4,13 +4,16 @@ import repairImage1 from '../../img/part6.jpg';
 import repairImage2 from '../../img/data1.jpg';
 import repairImage3 from '../../img/licenses5.png';
 import repairImage4 from '../../img/cc5.jpg';
+import Carousel from './Carousel';
 
 const Services = () => {
   return (
-    <div className='container'>
+    <div className='my-container'>
+    <div className='container mt-5'>
+      <Carousel />
       <div className="services-container">
         <h2 className='text-center'>Our Services</h2>
-        <p>iTZ-ONE differentiates itself from its larger industry counterparts with a unique understanding of the challenges both consulting companies and their clients face. This has motivated our market positioning, where we prioritize hands-on involvement and accountability with our customers.</p>
+        <p>iTZ-ONE differentiates itself very specifically from its larger industry counterparts. A unique understanding of the challenges facing both consulting companies as well as the organizations that utilize their services has to a large extent motivated the market positioning of iTZ-ONE. Rather than adopt an indifferent, non-accountable stance with its customers, iTZ-ONE has chosen the route of hands-on involvement and accountability.</p>
       </div>
 
       <div className="service-container container1">
@@ -64,6 +67,7 @@ Stay “anywhere”, View from “anywhere” – free mobile app view</p>
           <img src={repairImage1} alt="Data Backup & Recovery" className='ipad-class mt-2'/>
         </div>
       </div>
+    </div>
     </div>
   );
 }

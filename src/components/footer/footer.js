@@ -4,6 +4,7 @@ import { faInstagram, faTwitter, faFacebook } from '@fortawesome/free-brands-svg
 
 const Footer = () => {
   return (
+    <div className='container mt-5'>
     <footer style={styles.footer}>
       <div style={styles.column}>
         <p style={styles.workingTime}>WORKING TIME</p>
@@ -38,10 +39,12 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </div>
   );
 };
 
 const styles = {
+
   footer: {
     backgroundColor: '#333',
     color: '#fff',
