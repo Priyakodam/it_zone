@@ -4,8 +4,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import lap from "../../img/cc5.jpg";
+import cc5 from "../../img/cc5.jpg";
 import cc2 from "../../img/cc2.jpg";
+import cc3 from "../../img/cc3.jpg";
+import data3 from "../../img/data3.webp";
+import lap from "../../img/lap.jpg"
 import part6 from '../../img/part6.jpg';
 import camera2 from '../../img/cc-camera2.webp'
 import hardware from "../../img/hardware.jpeg";
@@ -15,13 +18,38 @@ import HomeCarousel from './HomeCarousel';
 const Home = () => {
  
   return (
-    <div>
-      <div className="container mt-4">
+    <>
+    <div className="container-fluid mt-4">
       <HomeCarousel />
       </div>
       <div className="container mt-5">
+      <div className="service-cards">
+    <div className="service-card ">
+      <img src={cc3} alt="" className="service-img "  />
+      <h3>Our business areas</h3>
+      <p>IT-Zone’s operations are organized into four global business areas, which in turn are made up of 21 divisions.</p>
+    </div>
+    <div className="service-card ">
+      <img src={data3} alt="" className="service-img" />
+      <h3>Contact us</h3>
+      <p>Get in touch with IT-Zone and find the right resources to help.</p>
+    </div>
+    <div className="service-card ">
+      <img src={lap} alt="" className="service-img" />
+      <h3>Our purpose</h3>
+      <p>Our purpose is at the core of who we are and what we do.</p>
+    </div>
+    <div className="service-card ">
+      <img src={cc2} alt="" className="service-img" />
+      <h3>Technology and innovation</h3>
+      <p>IT-Zone delivers end-to-end value by driving advances across a wide spectrum of industrial technologies.</p>
+    </div>
+    </div>
+      </div>
+    <div>
+      <div className="container mt-5">
         <div className="background-container">
-          <img src={lap} alt="Laptop" className="product-image" />
+          <img src={cc5} alt="Laptop" className="product-image" />
           <div
             className="text-content bg-white p-5 "
             style={{ textAlign: "justify" }}
@@ -51,8 +79,8 @@ const Home = () => {
       </div>
 
       <div className="container mt-5">
-        <div className="card">
-          <div className="card-body">
+        <div className="aboutcard">
+          <div className="aboutcard-body">
             <div className="row">
               <div className="col-md-6 " style={{ textAlign: "justify" }}>
                 <h3 className="text-center">About Us</h3>
@@ -151,6 +179,7 @@ const Home = () => {
       </div> */}
 
     </div>
+    </>
   );
 };
 
