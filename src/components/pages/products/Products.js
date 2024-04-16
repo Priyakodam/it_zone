@@ -13,13 +13,17 @@ import enterprise from "../../img/enterprise software.webp";
 import apple from "../../img/applelaptop.jpg"; // Replace with actual path to image
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+
 const Products = () => {
   const [showModal, setShowModal] = useState(false);
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
 
-  const contentRef = useRef(null);
-  const imageRef = useRef(null);
+  // Create an array of refs
+  const refs = useRef([]);
+  if (refs.current.length !== 7) {  // You need six refs, 3 pairs of content and image
+    refs.current = Array(7).fill().map((_, i) => refs.current[i] || React.createRef());
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,29 +31,24 @@ const Products = () => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-on-scroll');
-            observer.unobserve(entry.target);  // Stop observing after animation to prevent re-triggering
+            observer.unobserve(entry.target);  // Only animate once
           }
         });
       },
-      { threshold: 0.5 } // Triggers when half of the element is visible
+      { threshold: 0.5 } // Adjust based on your needs
     );
 
-    const contentElement = contentRef.current;
-    const imageElement = imageRef.current;
-
-    if (contentElement) {
-      observer.observe(contentElement);
-    }
-    if (imageElement) {
-      observer.observe(imageElement);
-    }
+    refs.current.forEach(ref => {
+      if (ref.current) observer.observe(ref.current);
+    });
 
     return () => {
-      observer.disconnect(); // Clean up the observer on unmount
+      refs.current.forEach(ref => {
+        if (ref.current) observer.unobserve(ref.current);
+      });
+      observer.disconnect();
     };
   }, []);
-
-  
   return (
     <div className="my-Product">
       <div className="container  mt-5">
@@ -117,7 +116,7 @@ const Products = () => {
   <div className="card">
     <div className="card-body">
       <div className="row">
-      <div className="col-md-6 content-animate" ref={contentRef} style={{ textAlign: "justify" }}>
+      <div className="col-md-6 content-animate" ref={refs.current[0]} style={{ textAlign: "justify" }}>
           <h3 className="text-center">CCTV Services</h3>
           <p>
             iTZ-ONE offers an Annual Maintenance Contract that will help
@@ -130,7 +129,7 @@ const Products = () => {
             a very economical rate.
           </p>
         </div>
-        <div className="col-md-6 image-animate" ref={imageRef}>
+        <div className="col-md-6 image-animate" ref={refs.current[1]}>
           <img src={cc2} alt="CCTV Camera" className="image" />
           <img src={cc2} alt="CCTV Camera" className="image ipad-class mt-3" />
         </div>
@@ -182,7 +181,7 @@ const Products = () => {
         <div className="card">
           <div className="card-body">
             <div className="row">
-              <div className="col-md-6 " style={{ textAlign: "justify" }}>
+              <div className="col-md-6 content-animate" ref={refs.current[3]} style={{ textAlign: "justify" }}>
                 <h3 className="text-center">Enterprise Wi-Fi Solutions</h3>
                 <p>
                   Today, businesses need fast and reliable internet connectivity
@@ -203,7 +202,7 @@ const Products = () => {
                 </p>
               </div>
 
-              <div className="col-md-6 image-container">
+              <div className="col-md-6 image-container image-animate" ref={refs.current[4]}>
                 <img src={computer3} alt="Laptop" className="image1" />
                 <img
                   src={computer3}
@@ -325,7 +324,7 @@ const Products = () => {
         <div className="card">
           <div className="card-body">
             <div className="row">
-              <div className="col-md-6 " style={{ textAlign: "justify" }}>
+              <div className="col-md-6 content-animate" ref={refs.current[5]} style={{ textAlign: "justify" }}>
                 <h3 className="text-center">Server Rack and Cable Managment</h3>
                 <p>
                   Data centers today consist of rows of server racks and network
@@ -336,7 +335,7 @@ const Products = () => {
                   if you follow the right guide.
                 </p>
               </div>
-              <div className="col-md-6 image-container">
+              <div className="col-md-6 image-container image-animate" ref={refs.current[6]}>
                 <img src={Hardware} alt="Laptop" className="image" />
                 <img
                   src={Hardware}
