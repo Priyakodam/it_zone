@@ -32,10 +32,30 @@
 .column_right {
   flex-basis: 56%;
 }
+/* Existing CSS */
+
 .about-img {
   width: 80vw;
   border-radius: 10px;
+  /* Add animation properties */
+  animation-name: jumpAndFall;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
+
+/* Define keyframes for the animation */
+@keyframes jumpAndFall {
+  0% {
+    transform: translateY(-100px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .play-img {
   position: absolute;
   top: 50%;
@@ -73,7 +93,7 @@
     flex-basis: 100%;
     margin: 20px;
     order: 1; /* Change the order to 1 */
-    margin-top: -100px;
+    margin-top: -50px;
   }
   .column_right {
     flex-basis: 100%;

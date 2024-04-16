@@ -1,14 +1,10 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faTwitter,
-  faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
-import { BiAlignLeft } from "react-icons/bi";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
+    <div className='container-fluid mt-5 bg-dark'>
     <footer style={styles.footer}>
       <div style={styles.column}>
         <p style={styles.workingTime}>WORKING TIME</p>
@@ -38,37 +34,53 @@ const Footer = () => {
             <FontAwesomeIcon icon={faFacebook} style={styles.icon} />
           </a>
         </div>
-        <p style={styles.text}>© 2024 IT ZONE</p>
+        <p style={styles.text}>© 2024 IT-ZONE</p>
+      </div>
+      <div style={{ ...styles.column, ...styles.fullWidth }}>
+        <hr/>
+        <div style={{...styles.row}}>
+        <p style={styles.footerText}>
+        © 2024 IT-ZONE
+        </p>
+        <p style={styles.footerText}>
+         Privacy Notice
+        </p>
+        <p style={styles.footerText}>
+         Change cookie settings
+        </p>
+        </div>
       </div>
     </footer>
+    </div>
   );
 };
 
 const styles = {
-  footer: {
-    backgroundColor: "#333",
-    color: "#fff",
-    textAlign: "center",
-    padding: "5px",
-    position: "fixed",
-    left: 0,
-    bottom: 0,
-    width: "100%",
 
+  footer: {
+    backgroundColor: 'dark',
+    color: '#fff',
+    textAlign: 'center',
+    padding: '5px',
     // left: 0,
     // top:10,
     bottom: 0,
     width: "100%",
     // height: '30vh',
-
-    display: "flex",
-    justifyContent: "space-around",
+    display: 'flex',
+    justifyContent: 'space-around',
+    paddingTop: '20px',
+    flexWrap: 'wrap', // Allow flex items to wrap
   },
   column: {
-    flex: 1,
+    flex: '1 1 50%', // Each column takes 50% width
+    textAlign: 'center',
+    // marginBottom: '10px',
+    paddingTop:"-50px"
   },
   iconContainer: {
-    marginBottom: "10px",
+    paddingTop: '10px',
+    paddingLeft:'20px'
   },
   icon: {
     fontSize: "24px",
@@ -80,6 +92,19 @@ const styles = {
     margin: "10px 0 0",
     fontSize: "14px",
   },
+  footerText: {
+    fontSize: '12px',
+    marginTop: '10px',
+  },
+  fullWidth: {
+    flexBasis: '100%', // Take full width when wrapped
+  },
+  row:{
+    display:"flex",
+    justifyContent: 'space-around',
+    // flexWrap: 'wrap', 
+  }
 };
+
 
 export default Footer;

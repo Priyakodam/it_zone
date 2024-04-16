@@ -4,6 +4,11 @@
   color: #333; /* Dark grey text */
   
 }
+
+.my-Product{
+  margin-top: 100px;
+}
+
 .my-container{
   margin-top: 150px;
   margin-bottom: 150px;
@@ -254,6 +259,39 @@ p {
       }
   }
 
+
+/* Initially hide elements and set them to move into view from the sides */
+.content-animate, .image-animate {
+  opacity: 0;
+}
+
+.content-animate {
+  transform: translateX(100%); /* Start content off to the right */
+}
+
+.image-animate {
+  transform: translateX(-100%); /* Start images off to the left */
+}
+
+.animate-on-scroll {
+  animation: slideIntoView 1s forwards;
+}
+
+@keyframes slideIntoView {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+  
+
+  .text-content:hover{
+    background-color: red; /* Change to your desired light color */
+    transform: scale(1.05); /* Zoom in effect on hover */
+      border-radius: 15px;
+      box-shadow: #464545;
+  }
  
   @keyframes slideFromRight {
     0% {
@@ -264,19 +302,32 @@ p {
       transform: translateX(0);
       opacity: 1;
     }
+
   }
   
-  @keyframes slideFromLeft {
-    0% {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
+  .product-image:hover{
+    background-color: red; /* Change to your desired light color */
+    transform: scale(1.05); /* Zoom in effect on hover */
+    border-radius: 15px;
+    box-shadow: #464545;
   }
+
+  .product-image {
+    width: 70%;
+    height: auto;  /* Ensure image maintains aspect ratio */
+    transition: transform 0.3s ease, background-color 0.3s ease;}
   
+
+  .text-content {
+    position: absolute;
+    top: 15%;  
+    left: 40%;
+    right: 0%;
+    background: rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  
+  }
+
  
   .left-animate {
     animation: slideFromRight 1s ease-out forwards;
@@ -286,4 +337,5 @@ p {
     animation: slideFromLeft 1s ease-out forwards;
   }
   
+
 

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-
+import axios from "axios";
 import "./Contact.css"; // Import CSS file
 import "@fortawesome/fontawesome-free/css/all.css";
+import { Button, TextField } from "@mui/material";
 
 const Contact = () => {
+  const [result, setResult] = React.useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,33 +21,28 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
+    setResult("Sending....");
     e.preventDefault();
     try {
-      const response = await fetch(
-        "https://kodamharish.pythonanywhere.com/form_data_send_mail",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            to_email: "uppalahemanth4@gmail.com", // Email to which you want to send the form data
-            subject: `Message from ${formData.name}`,
-            message: `Name: ${formData.name}, Email: ${formData.email}, Message: ${formData.message}`,
-            // You can modify this body content according to your API requirements and how you want the email to be formatted.
-          }),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Something went wrong with the network request");
-      }
-
-      const data = await response.json();
-      alert("Message sent successfully!");
+        const response = await axios.post(
+            "https://kodamharish.pythonanywhere.com/form_data_send_mail",
+            {
+              to_email: "varunpruthvi4@gmail.com",
+              subject: `Message from ${formData.name}`, // Use backticks (`) for template literals
+              message: `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`,
+            }
+          );
+      setResult("Form Submitted Successfully");
+      // alert("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
     } catch (error) {
       console.error("Failed to send message:", error);
-      alert("Failed to send message. Please try again later.");
+      // alert("Failed to send message. Please try again later.");
+      setResult(error);
     }
   };
 
@@ -54,60 +51,98 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-section">
           <div className="contact-info">
-            <h2>Contact Information</h2>
+            <h2>Reach Us</h2>
+            <br />
             <div className="info-item">
-              <h3>
-                <i className="fas fa-phone"></i> Phone Number
-              </h3>
-              <p>8861796976</p>
+              <h4>
+                {/* <i className="fas fa-phone"></i>{" "} */}
+                <a href="tel:8861796976" style={{ textDecoration: "none" }}>
+                  <i className="fas fa-phone"></i> 8861796976
+                </a>
+              </h4>
+              <br />
+              {/* <p>8861796976</p> */}
             </div>
             <div className="info-item">
-              <h3>
-                <i className="fas fa-envelope"></i> Email
-              </h3>
-              <p>info@it-zone.in</p>
+              <h4>
+                <a
+                  href="mailto:info@it-zone.in"
+                  style={{ textDecoration: "none" }}
+                >
+                  <i className="fas fa-envelope"></i> info@it-zone.in
+                </a>
+              </h4>
+              <br />
+              {/* <p>info@it-zone.in</p> */}
             </div>
             <div className="info-item">
-              <h3>
-                <i className="fas fa-map-marker-alt"></i> Address
-              </h3>
-              <p>IT Zone, Maruthi Nagar, Kaggadasapura, Bengaluru</p>
+              <h4>
+                <i className="fas fa-map-marker-alt"></i> IT Zone, Maruthi
+                Nagar, Kaggadasapura, Bengaluru
+              </h4>
+              <br />
+              {/* <p>IT Zone, Maruthi Nagar, Kaggadasapura, Bengaluru</p> */}
             </div>
           </div>
+
           <div className="contact-form">
             <h2>Contact Us</h2>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="name">Name:</label>
-                <input
-                  type="text"
+                <TextField
                   id="name"
+                  type="text"
+                  margin="dense"
+                  variant="standard"
+                  label="Name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
+                  sx={{ width: "80%" }}
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="email">Email:</label>
-                <input
-                  type="email"
+                <TextField
                   id="email"
+                  type="email"
+                  margin="dense"
+                  variant="standard"
+                  label="Email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
+                  sx={{ width: "80%" }}
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="message">Message:</label>
-                <textarea
+                <TextField
                   id="message"
+                  label="Enter your message"
+                  margin="dense"
                   name="message"
-                  rows="4"
+                  multiline
+                  rows={4}
+                  defaultValue=""
+                  variant="standard"
                   value={formData.message}
                   onChange={handleChange}
-                ></textarea>
+                  sx={{ width: "80%" }}
+                />
               </div>
-              <button type="submit">Submit</button>
+
+              {/* <Button variant="contained" sx={{ width: "auto" }}>
+                Submit
+              </Button> */}
+              <div className="custom-button-container">
+                <Button
+                  variant="contained"
+                  className="custom-button"
+                  onClick={handleSubmit}
+                >
+                  Submit
+                </Button>
+              </div>
+              <span>{result}</span>
             </form>
           </div>
         </div>

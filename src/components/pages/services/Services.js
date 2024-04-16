@@ -8,7 +8,7 @@ import Carousel from './Carousel';
 
 const Services = () => {
   return (
-    <div className='my-container'>
+    <div className='my-Service'>
     <div className='container mt-5'>
       <Carousel />
       <div className="services-container">
