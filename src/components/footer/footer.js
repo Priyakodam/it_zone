@@ -12,29 +12,17 @@ const Footer = () => {
       </div>
       <div style={styles.column}>
         <div style={styles.iconContainer}>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} style={styles.icon} />
           </a>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTwitter} style={styles.icon} />
           </a>
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebook} style={styles.icon} />
           </a>
         </div>
-        <p style={styles.text}>© 2024 IT-ZONE</p>
+        <p style={styles.text}>© 2024 IT-Z<spam style={{color:"red"}}>O</spam>NE</p>
       </div>
       <div style={{ ...styles.column, ...styles.fullWidth }}>
         <hr/>
@@ -58,14 +46,13 @@ const Footer = () => {
 const styles = {
 
   footer: {
-    backgroundColor: 'dark',
+    backgroundColor: '#0d0f21',
     color: '#fff',
     textAlign: 'center',
     padding: '5px',
     // left: 0,
-    // top:10,
     bottom: 0,
-    width: "100%",
+    width: '100%',
     // height: '30vh',
     display: 'flex',
     justifyContent: 'space-around',
@@ -83,18 +70,20 @@ const styles = {
     paddingLeft:'20px'
   },
   icon: {
-    fontSize: "24px",
-    margin: "0 10px",
-    color: "#fff",
-    textDecoration: "none",
+    fontSize: '24px',
+    margin: '0 10px',
+    color: '#fff',
+    textDecoration: 'none',
   },
   workingTime: {
-    margin: "10px 0 0",
-    fontSize: "14px",
+    margin: '10px 0 0',
+    fontSize: '14px',
   },
   footerText: {
     fontSize: '12px',
     marginTop: '10px',
+    textDecoration:"underline",
+    color:"red"
   },
   fullWidth: {
     flexBasis: '100%', // Take full width when wrapped

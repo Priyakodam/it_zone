@@ -31,7 +31,6 @@ p {
   line-height: 1.6;
   margin-bottom: 20px;
 }
-
 .home-card {
   max-width: 23%;
   background-color: white;
@@ -40,7 +39,43 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  opacity: 0; /* Initially hide the cards */
+  animation: slideInLeft 0.5s ease forwards;
 }
+
+/* Apply animation only when the card is in view */
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-card:nth-child(1) {
+  animation: slideInUp 0.5s ease forwards 0.1s; /* Delay the animation of the first card by 0.1s */
+}
+
+.home-card:nth-child(2) {
+  animation: slideInUp 0.5s ease forwards 0.2s; /* Delay the animation of the second card by 0.2s */
+}
+
+.home-card:nth-child(3) {
+  animation: slideInUp 0.5s ease forwards 0.3s; /* Delay the animation of the third card by 0.3s */
+}
+
+.home-card:nth-child(4) {
+  animation: slideInUp 0.5s ease forwards 0.4s; /* Delay the animation of the fourth card by 0.4s */
+}
+
+/* Add more nth-child styles as needed for additional cards */
+
+
+/* Add more nth-child styles as needed for additional cards */
+
 
 .home-card:hover {
   transform: scale(1.05);
@@ -77,8 +112,9 @@ p {
   justify-content: space-between;
 }
 
+
 /* Responsive Styles for Tablets and Below */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .home-card {
     max-width: 48%;
   }
@@ -111,11 +147,22 @@ p {
     font-size: 14px;
   }
 
-  .discover-more-btn, .narrow-button {
+  .button-homecontainer {
+    text-decoration: none;
+  }
+  
+  .button-homecontainer:hover .btn {
+    color: #212121; 
+    text-decoration: none;
+  }
+  
+  .narrow-button:hover {
     padding: 8px 16px;
     font-size: 12px;
+    text-decoration: none;
   }
-
+  
+  
   .red-dash {
     width: 30px;
     height: 5px;
@@ -126,7 +173,7 @@ p {
     padding-top: 0;
   }
 
-  .text-content, .text-image {
+  .hometext-content, .hometext-image {
     position: static;
     padding: 10px;
     margin-top: 10px;
@@ -162,7 +209,7 @@ p {
   width: 100%;
 }
 
-.text-content {
+.hometext-content {
   position: absolute;
   top: 20%;
   left: 40%;
@@ -184,3 +231,21 @@ p {
 }
 
 /* Ensuring that all text and interactive elements are appropriately scaled and positioned on smaller screens helps to maintain a user-friendly interface. These adaptations also prioritize readability and ease of interaction, which are crucial for mobile users. */
+
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9); /* Start slightly smaller */
+    opacity: 0;
+  }
+  to {
+    transform: scale(1); /* Zoom in to original size */
+    opacity: 1;
+  }
+}
+
+.background-homecontainer {
+  animation: zoomIn 0.5s ease-in-out forwards; /* Apply zoom in animation */
+}
+
+
