@@ -25,7 +25,7 @@ const Home = () => {
     {/* <div className="homecontainer mt-5">
       <HomeCarousel />
       </div> */}
-      <div className="homecontainer1 mt-5">
+      <div className="homecontainer mt-5">
       <HomeVideo />
       </div>
       <div className="homecontainer mt-5">
