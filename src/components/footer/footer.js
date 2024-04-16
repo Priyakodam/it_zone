@@ -51,6 +51,7 @@ const styles = {
     textAlign: 'center',
     padding: '5px',
     // left: 0,
+    // top:10,
     bottom: 0,
     width: '100%',
     // height: '30vh',

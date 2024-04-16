@@ -4,8 +4,15 @@
   color: #333; /* Dark grey text */
   
 }
+
 .my-Product{
   margin-top: 100px;
+}
+
+  
+.my-container{
+  margin-top: 150px;
+
   margin-bottom: 150px;
 }
 
@@ -71,7 +78,7 @@ p {
 
 .text-content {
   position: absolute;
-  top: 20%;  
+  top: 13%;  /* Start at 20% from the top */
   left: 40%;
   right: 0%;
   background: rgba(255, 255, 255, 0.9);
@@ -178,12 +185,6 @@ p {
 }
 
 
-
-/* Ensure the column is a flex container and align items centrally */
-
-
-
-
 .image1 {
     width: 100%;
     display: flex;
@@ -216,7 +217,7 @@ p {
 /* second bg image */
 .text-image {
     position: absolute;
-    top: 20%;  /* Start at 20% from the top */
+    top: 13%;  /* Start at 20% from the top */
     left: 40%;
     right: 0%;
     background: rgba(255, 255, 255, 0.9);
@@ -236,11 +237,7 @@ p {
     }
   }
 
-  /*end od bg image  */
-
-
-
-  
+ 
 .ipad-class {
     display: none;
   }
@@ -263,6 +260,7 @@ p {
           display: block;
       }
   }
+
 
 /* Initially hide elements and set them to move into view from the sides */
 .content-animate, .image-animate {
@@ -296,6 +294,18 @@ p {
       border-radius: 15px;
       box-shadow: #464545;
   }
+ 
+  @keyframes slideFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+  }
   
   .product-image:hover{
     background-color: red; /* Change to your desired light color */
@@ -309,6 +319,7 @@ p {
     height: auto;  /* Ensure image maintains aspect ratio */
     transition: transform 0.3s ease, background-color 0.3s ease;}
   
+
   .text-content {
     position: absolute;
     top: 15%;  
@@ -318,3 +329,15 @@ p {
     transition: transform 0.3s ease, background-color 0.3s ease;
   
   }
+
+ 
+  .left-animate {
+    animation: slideFromRight 1s ease-out forwards;
+  }
+  
+  .right-animate {
+    animation: slideFromLeft 1s ease-out forwards;
+  }
+  
+
+

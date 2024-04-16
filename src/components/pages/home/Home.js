@@ -22,14 +22,13 @@ const Home = () => {
   return (
     <>
      <div className="homecontainer mt-5"></div>
-    {/* <div className="homecontainer mt-5">
-      <HomeCarousel />
-      </div> */}
-      <div className="homecontainer1 mt-5">
+   
+     
       <HomeVideo />
-      </div>
+      
       <div className="homecontainer mt-5">
-      <div className="home-cards">
+      {/* <h1 >ITZONE innovations at work</h1> */}
+    <div className="home-cards">    
     <div className="home-card ">
       <img src={cc3} alt="" className="service-img "  />
       <h3>Our business areas</h3>
@@ -182,9 +181,6 @@ const Home = () => {
         </div>
       </div>
       
-
-
-    
     </>
   );
 };

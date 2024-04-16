@@ -32,7 +32,6 @@ const Contact = () => {
               message: `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`,
             }
           );
-          
       setResult("Form Submitted Successfully");
       // alert("Message sent successfully!");
       setFormData({
@@ -165,4 +164,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
