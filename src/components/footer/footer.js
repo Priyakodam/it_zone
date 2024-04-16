@@ -22,7 +22,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faFacebook} style={styles.icon} />
           </a>
         </div>
-        <p style={styles.text}>© 2024 IT-ZONE</p>
+        <p style={styles.text}>© 2024 IT-Z<spam style={{color:"red"}}>O</spam>NE</p>
       </div>
       <div style={{ ...styles.column, ...styles.fullWidth }}>
         <hr/>
@@ -46,10 +46,11 @@ const Footer = () => {
 const styles = {
 
   footer: {
-    backgroundColor: 'dark',
+    backgroundColor: '#0d0f21',
     color: '#fff',
     textAlign: 'center',
     padding: '5px',
+
 
     // position: 'fixed',
     left: 0,
@@ -58,12 +59,11 @@ const styles = {
     bottom: 0,
     width: '100%',
 
+
     // left: 0,
-    // top:10,
     bottom: 0,
     width: '100%',
     // height: '30vh',
-
     display: 'flex',
     justifyContent: 'space-around',
     paddingTop: '20px',
@@ -76,13 +76,8 @@ const styles = {
     paddingTop:"-50px"
   },
   iconContainer: {
-
-    marginBottom: '5px',
-    marginTop: '10px',
-
     paddingTop: '10px',
     paddingLeft:'20px'
-
   },
   icon: {
     fontSize: '24px',
@@ -91,12 +86,14 @@ const styles = {
     textDecoration: 'none',
   },
   workingTime: {
-    margin: '10px 0px 0px',
+    margin: '10px 0 0',
     fontSize: '14px',
   },
   footerText: {
     fontSize: '12px',
     marginTop: '10px',
+    textDecoration:"underline",
+    color:"red"
   },
   fullWidth: {
     flexBasis: '100%', // Take full width when wrapped
