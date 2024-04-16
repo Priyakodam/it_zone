@@ -21,17 +21,15 @@ const firebaseConfig = {
     projectId: "itzone-1",
     storageBucket: "itzone-1.appspot.com",
     messagingSenderId: "1039888475771",
-    appId: "1:1039888475771:web:3fdc6ad5245122d623e4de"
+    appId: "1:1039888475771:web:3fdc6ad5245122d623e4de",
   };
   
-  // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
   const storage = getStorage(app);
   const auth = getAuth(app);
   
   export { app, db, storage, getFirestore, auth };
-  
 
 
 function App() {
@@ -45,14 +43,7 @@ function App() {
                     <Route path="/about" element={<About/>} />
                     <Route path="/services" element={<Services/>}/> 
                     <Route path="/products" element={<Products/>} />
-
                     <Route path="/contact" element={<Contact/>} /> 
-
-                    <Route path="/contact" element={<Contact/>} />
-                    <Route path="/carousel" element={<Carousel/>} />
-
-                    <Route path="/contact" element={<Contact/>} /> 
-                    <Route path="/contact" element={<Contact/>} />
                     <Route path="/carousel" element={<Carousel/>} />
 
                 </Routes>

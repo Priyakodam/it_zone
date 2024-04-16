@@ -57,7 +57,7 @@ const Home = () => {
         <div className="background-homecontainer">
           <img src={cc5} alt="Laptop" className="product-image" />
           <div
-            className="text-content bg-white p-5 "
+            className="hometext-content bg-white p-5 "
             style={{ textAlign: "justify" }}
           >
             <div className="red-dash"></div>
@@ -115,7 +115,7 @@ const Home = () => {
         <div className="background-homecontainer">
           <img src={part6} alt="Laptop" className="product-image" />
           <div
-            className="text-content text-image bg-white p-5"
+            className="hometext-content hometext-image bg-white p-5"
             style={{ textAlign: "justify" }}
           >
             <div className="red-dash"></div>

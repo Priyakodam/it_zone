@@ -15,38 +15,43 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 const Products = () => {
   const [showModal, setShowModal] = useState(false);
-
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
-   // Refs for animating elements on scroll
-   const leftAnimateRef = useRef(null);
-   const rightAnimateRef = useRef(null);
- 
-   useEffect(() => {
-     const observer = new IntersectionObserver(
-       (entries, observer) => {
-         entries.forEach(entry => {
-           if (entry.isIntersecting) {
-             entry.target.classList.add('animate-on-scroll');
-             observer.unobserve(entry.target); // Optional: Unobserve after animation
-           }
-         });
-       },
-       { threshold: 0.5 } // Trigger when 50% of the element is in view
-     );
- 
-     if (leftAnimateRef.current) {
-       observer.observe(leftAnimateRef.current);
-     }
-     if (rightAnimateRef.current) {
-       observer.observe(rightAnimateRef.current);
-     }
- 
-     return () => observer.disconnect(); // Cleanup observer on component unmount
-   }, []);
 
+  const contentRef = useRef(null);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-on-scroll');
+            observer.unobserve(entry.target);  // Stop observing after animation to prevent re-triggering
+          }
+        });
+      },
+      { threshold: 0.5 } // Triggers when half of the element is visible
+    );
+
+    const contentElement = contentRef.current;
+    const imageElement = imageRef.current;
+
+    if (contentElement) {
+      observer.observe(contentElement);
+    }
+    if (imageElement) {
+      observer.observe(imageElement);
+    }
+
+    return () => {
+      observer.disconnect(); // Clean up the observer on unmount
+    };
+  }, []);
+
+  
   return (
-    <div className="my-container">
+    <div className="my-Product">
       <div className="container  mt-5">
         <div className="row">
           <div className="col-md-12 text-center">
@@ -112,7 +117,7 @@ const Products = () => {
   <div className="card">
     <div className="card-body">
       <div className="row">
-      <div className="col-md-6 left-animate" ref={leftAnimateRef} style={{ textAlign: "justify" }}>
+      <div className="col-md-6 content-animate" ref={contentRef} style={{ textAlign: "justify" }}>
           <h3 className="text-center">CCTV Services</h3>
           <p>
             iTZ-ONE offers an Annual Maintenance Contract that will help
@@ -125,7 +130,7 @@ const Products = () => {
             a very economical rate.
           </p>
         </div>
-        <div className="col-md-6 right-animate" ref={rightAnimateRef}>
+        <div className="col-md-6 image-animate" ref={imageRef}>
           <img src={cc2} alt="CCTV Camera" className="image" />
           <img src={cc2} alt="CCTV Camera" className="image ipad-class mt-3" />
         </div>
