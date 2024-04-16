@@ -9,7 +9,19 @@ import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
 import Carousel from './components/pages/services/Carousel';
 import ScrollBar from './components/scroll/ScrollBar';
+import { initializeApp } from "firebase/app";
 
+const firebaseConfig = {
+    apiKey: "AIzaSyAuhNpLVtu_Wuz55liFDjnX4qmI3fsvBlQ",
+    authDomain: "it-zone-ad382.firebaseapp.com",
+    projectId: "it-zone-ad382",
+    storageBucket: "it-zone-ad382.appspot.com",
+    messagingSenderId: "381051361860",
+    appId: "1:381051361860:web:5664788ce2a954b2993a11"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
 
 function App() {
     return (
@@ -22,14 +34,7 @@ function App() {
                     <Route path="/about" element={<About/>} />
                     <Route path="/services" element={<Services/>}/> 
                     <Route path="/products" element={<Products/>} />
-
                     <Route path="/contact" element={<Contact/>} /> 
-
-                    <Route path="/contact" element={<Contact/>} />
-                    <Route path="/carousel" element={<Carousel/>} />
-
-                    <Route path="/contact" element={<Contact/>} /> 
-                    <Route path="/contact" element={<Contact/>} />
                     <Route path="/carousel" element={<Carousel/>} />
 
                 </Routes>

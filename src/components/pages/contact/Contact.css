@@ -1,6 +1,8 @@
-.my-conatiner{
-  margin-bottom: 150px;
+.my-conatiner {
+  margin-top: 100px;
+  margin-bottom: 550px;
 }
+
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -40,13 +42,13 @@ label {
   font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
+TextField[type="text"],
+TextField[type="email"],
 textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  /* border: 1px solid #ccc; */
+  /* border-radius: 5px; */
 }
 
 button {
@@ -68,39 +70,47 @@ button:hover {
   width: 100%;
 }
 
-
 @media (max-width: 520px) {
   .contact-container {
-      width: 100%; 
-      padding: 10px; 
+    width: 100%;
+    padding: 10px;
   }
 
   .contact-section {
-      flex-direction: column; 
-      align-items: center; 
+    flex-direction: column;
+    align-items: center;
   }
 
-  .contact-info, .contact-form {
-      width: 100%;
-      padding: 10px 0; 
-      border-right: none; 
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    padding: 10px 0;
+    border-right: none;
   }
 
   .contact-form {
-      padding-top: 20px; 
+    padding-top: 20px;
   }
 
   button {
-      padding: 12px; 
+    padding: 12px;
   }
 
   input[type="text"],
   input[type="email"],
   textarea {
-      font-size: 16px; 
+    font-size: 16px;
   }
 
   .map iframe {
-      height: 300px;
+    height: 300px;
   }
+}
+.custom-button-container {
+  display: flex;
+
+  margin: 20px 0px;
+}
+.custom-button {
+  width: auto; /* Set a maximum width for the button */
 }

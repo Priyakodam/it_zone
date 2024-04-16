@@ -1,4 +1,3 @@
-// App.jsx
 import React from 'react';
 import Cards from "./Cards";
 import './About.css'; // Import CSS file
