@@ -6,6 +6,7 @@
 }
 .my-container{
   margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -70,7 +71,7 @@ p {
 
 .text-content {
   position: absolute;
-  top: 20%;  
+  top: 13%;  /* Start at 20% from the top */
   left: 40%;
   right: 0%;
   background: rgba(255, 255, 255, 0.9);
@@ -177,12 +178,6 @@ p {
 }
 
 
-
-/* Ensure the column is a flex container and align items centrally */
-
-
-
-
 .image1 {
     width: 100%;
     display: flex;
@@ -215,7 +210,7 @@ p {
 /* second bg image */
 .text-image {
     position: absolute;
-    top: 20%;  /* Start at 20% from the top */
+    top: 13%;  /* Start at 20% from the top */
     left: 40%;
     right: 0%;
     background: rgba(255, 255, 255, 0.9);
@@ -235,11 +230,7 @@ p {
     }
   }
 
-  /*end od bg image  */
-
-
-
-  
+ 
 .ipad-class {
     display: none;
   }
@@ -263,9 +254,7 @@ p {
       }
   }
 
-
-
-
+ 
   @keyframes slideFromRight {
     0% {
       transform: translateX(100%);
@@ -288,7 +277,7 @@ p {
     }
   }
   
-  /* Applying the animations to your columns */
+ 
   .left-animate {
     animation: slideFromRight 1s ease-out forwards;
   }
@@ -297,3 +286,4 @@ p {
     animation: slideFromLeft 1s ease-out forwards;
   }
   
+

@@ -1,4 +1,9 @@
-/* General and Component-specific Styles */
+
+
+
+my-container{
+margin-top: 150px;
+}
 .homecontainer, .homecontainer2, .homecontainer1 {
   font-family: 'Roboto', sans-serif;
   color: black;
@@ -8,6 +13,8 @@
 
 .homecontainer2 {
   margin-bottom: 150px;
+  margin-bottom: 200px;
+
 }
 
 .homecontainer1 {

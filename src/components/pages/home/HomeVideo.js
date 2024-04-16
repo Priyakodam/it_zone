@@ -15,7 +15,8 @@ function VideoBackground() {
   };
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: '620px' }}>
+
+    <div className='my-container'style={{ position: 'relative', width: '100%', height: '620px' }}>
       <video
         ref={videoRef}
         width="100%"
