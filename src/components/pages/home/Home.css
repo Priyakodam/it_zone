@@ -1,9 +1,4 @@
 
-
-
-my-container{
-margin-top: 150px;
-}
 .homecontainer, .homecontainer2, .homecontainer1 {
   font-family: 'Roboto', sans-serif;
   color: black;
@@ -13,12 +8,6 @@ margin-top: 150px;
 
 .homecontainer2 {
   margin-bottom: 150px;
-  margin-bottom: 200px;
-
-}
-
-.homecontainer1 {
-  margin-top: 68px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -184,7 +173,7 @@ p {
 .button-homecontainer {
   display: flex;
   justify-content: flex-end;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-bottom: 20px;
 }
 
