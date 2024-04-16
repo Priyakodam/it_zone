@@ -52,49 +52,6 @@ const Home = () => {
     </div>
       </div>
     
-      {/* <div className="homecontainer mt-5">
-        <h1 >ITZONE innovations at work</h1>
-      <div className="row">
-        <div className="col-md-6 mb-3">
-          <div className="card">
-          <img src={cc2} className="card-img-top" alt="Card 1" style={{width: "100%", height: "400px", objectFit: "cover", padding: "10px"}}/>
-            <div className="card-body">
-              <h4>Technology Solutions</h4>
-              <p className="card-text"> IT Zone may be innovating in areas such as cloud computing, artificial intelligence, machine learning, Internet of Things (IoT), blockchain, cybersecurity, and data analytics. They might be developing new software products, or services that leverage these technologies to solve business challenges or improve efficiency.</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6 mb-3">
-          <div className="card">
-          <img src={cc2} className="card-img-top" alt="Card 1" style={{width: "100%", height: "400px", objectFit: "cover", padding: "10px"}}/>
-            <div className="card-body">
-              <h4>Emerging Technologies</h4>
-              <p className="card-text"> Keeping an eye on emerging technologies such as quantum computing, augmented reality (AR), virtual reality (VR), and 5G networks, IT Zone may be investing in research and development to stay ahead of the curve and capitalize on future opportunities.</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6 mb-3">
-          <div className="card">
-          <img src={cc2} className="card-img-top" alt="Card 1" style={{width: "100%", height: "400px", objectFit: "cover", padding: "10px"}}/>
-            <div className="card-body">
-              <h4>User Experience (UX) and Design</h4>
-              <p className="card-text">  IT Zone could be focusing on improving the user experience of their products and services through innovative design, intuitive interfaces, and seamless integration across devices and platforms.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="col-md-6 mb-3">
-          <div className="card">
-          <img src={cc2} className="card-img-top" alt="Card 1" style={{width: "100%", height: "400px", objectFit: "cover", padding: "10px"}}/>
-            <div className="card-body">
-              <h4>Sustainability and Green IT</h4>
-              <p className="card-text">  IT Zone might be exploring ways to reduce the environmental impact of their technology solutions through initiatives such as energy-efficient data centers, eco-friendly hardware design, and carbon footprint reduction strategies.</p>
-            </div>
-          </div>
-        </div>
-       
-      </div>
-    </div> */}
 
       <div className="homecontainer mt-5">
         <div className="background-homecontainer">
@@ -114,10 +71,9 @@ const Home = () => {
               features and functions. Moreover, we have our own service center
               to bring out more technical solutions for you.
             </p>
-            {/* <Button onClick={handleShow} className="discover-more-btn">
-              view more
-            </Button> */}
+            
             <Link to="/products">
+
       <div className="button-homecontainer">
         <button className="btn btn-primary narrow-button">Explore More</button>
       </div>
@@ -169,9 +125,7 @@ const Home = () => {
     companies and their clients face. This has motivated our market positioning, where we prioritize hands-on involvement and accountability
      with our customers. 
             </p>
-            {/* <Button onClick={handleShow} className="discover-more-btn">
-              view more
-            </Button> */}
+           
             <Link to="/services">
       <div className="button-homecontainer">
         <button className="btn btn-primary narrow-button">Explore More</button>

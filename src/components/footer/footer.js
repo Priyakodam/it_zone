@@ -39,13 +39,8 @@ const styles = {
     left: 0,
     bottom: 0,
     width: '100%',
-
-    // left: 0,
-    // top:10,
     bottom: 0,
     width: '100%',
-    // height: '30vh',
-
     display: 'flex',
     justifyContent: 'space-around',
   },
@@ -53,7 +48,8 @@ const styles = {
     flex: 1,
   },
   iconContainer: {
-    marginBottom: '10px',
+    marginBottom: '5px',
+    marginTop: '10px',
   },
   icon: {
     fontSize: '24px',
@@ -62,7 +58,7 @@ const styles = {
     textDecoration: 'none',
   },
   workingTime: {
-    margin: '10px 0 0',
+    margin: '10px 0px 0px',
     fontSize: '14px',
   },
 };
