@@ -8,12 +8,6 @@
 
 .homecontainer2 {
   margin-bottom: 150px;
-
-}
-
-.homecontainer1 {
-  margin-top: 120px;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -114,7 +108,7 @@ p {
 
 
 /* Responsive Styles for Tablets and Below */
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 768px) {
   .home-card {
     max-width: 48%;
   }
@@ -173,7 +167,7 @@ p {
     padding-top: 0;
   }
 
-  .hometext-content, .hometext-image {
+  .text-content, .text-image {
     position: static;
     padding: 10px;
     margin-top: 10px;
@@ -209,7 +203,7 @@ p {
   width: 100%;
 }
 
-.hometext-content {
+.text-content {
   position: absolute;
   top: 20%;
   left: 40%;

@@ -51,7 +51,7 @@ const styles = {
     textAlign: 'center',
     padding: '5px',
 
-    position: 'fixed',
+    // position: 'fixed',
     left: 0,
     bottom: 0,
     width: '100%',
